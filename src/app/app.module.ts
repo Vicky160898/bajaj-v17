@@ -24,6 +24,7 @@ import { AxisBankComponent } from './pages/business/axis-bank/axis-bank.componen
 import { AxisBusinessDataComponent } from './pages/business/axis-bank/axis-business-data/axis-business-data.component';
 import { AxisBusinessGraphComponent } from './pages/business/axis-bank/axis-business-graph/axis-business-graph.component';
 import { UserInformationComponent } from './pages/performancematrics/user-information/user-information.component';
+import { PerformanceAxisBankComponent } from './pages/performancematrics/performance-axis-bank/performance-axis-bank.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { UserInformationComponent } from './pages/performancematrics/user-inform
     AxisBusinessDataComponent,
     AxisBusinessGraphComponent,
     UserInformationComponent,
+    PerformanceAxisBankComponent,
 
   ],
   imports: [
