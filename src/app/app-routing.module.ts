@@ -13,6 +13,7 @@ import { FaqComponent } from "./pages/faq/faq.component";
 import { ProfileComponent } from "./pages/profile/profile.component";
 import { AxisBankComponent } from "./pages/business/axis-bank/axis-bank.component";
 import { UserInformationComponent } from './pages/performancematrics/user-information/user-information.component';
+import { PerformanceAxisBankComponent } from './pages/performancematrics/performance-axis-bank/performance-axis-bank.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: "profile", component: ProfileComponent },
   { path: "axis-bank", component: AxisBankComponent },
   { path: "user-information", component: UserInformationComponent },
+  { path: "performance-axis-bank", component: PerformanceAxisBankComponent },
   { path: "**", redirectTo: "/" },
 ];
 

@@ -1,43 +1,43 @@
 {
-  "hash": "f1e5beca",
-  "configHash": "040e7f86",
-  "lockfileHash": "3eebdf0f",
-  "browserHash": "78c8bed3",
+  "hash": "ac0997d7",
+  "configHash": "d5f619f6",
+  "lockfileHash": "322cfc04",
+  "browserHash": "7682200f",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "61ec1329",
+      "fileHash": "bd3758aa",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "93e47d59",
+      "fileHash": "b0f6912d",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "7f803245",
+      "fileHash": "87486b7b",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "4cfc2a86",
+      "fileHash": "85eaea24",
       "needsInterop": false
     },
     "angular-svg-round-progressbar": {
       "src": "../../../../../node_modules/angular-svg-round-progressbar/fesm2022/angular-svg-round-progressbar.mjs",
       "file": "angular-svg-round-progressbar.js",
-      "fileHash": "dbfe9b81",
+      "fileHash": "c2b70951",
       "needsInterop": false
     },
     "ng2-charts": {
       "src": "../../../../../node_modules/ng2-charts/fesm2020/ng2-charts.mjs",
       "file": "ng2-charts.js",
-      "fileHash": "0911b2b9",
+      "fileHash": "10f169e4",
       "needsInterop": false
     }
   },
