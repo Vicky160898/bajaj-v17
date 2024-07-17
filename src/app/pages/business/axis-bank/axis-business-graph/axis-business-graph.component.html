@@ -1,0 +1,1942 @@
+<!-- Business Graph Data -->
+<div class="container-fluid white-main-content">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="mtd-ytd-monthly">
+                <div class="row">
+
+                    <div class="col-lg-12">
+
+                        <div class="tabs-mtd-ytd-monthly">
+                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-graphmtd-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-graphmtd" type="button" role="tab"
+                                        aria-controls="pills-graphmtd" aria-selected="true">MTD</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-graphytd-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-graphytd" type="button" role="tab"
+                                        aria-controls="pills-graphytd" aria-selected="false">YTD</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-graphmonthly-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-graphmonthly" type="button" role="tab"
+                                        aria-controls="pills-graphmonthly" aria-selected="false">Monthly</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tabs-mtd-ytd-monthly-content">
+
+                            <div class="tab-content" id="pills-tabContent">
+                                <!-- MTD -->
+                                <div class="tab-pane fade show active" id="pills-graphmtd" role="tabpanel"
+                                    aria-labelledby="pills-graphmtd-tab">
+
+                                    <!-- Slect Month and Year -->
+                                    <div class="row d-none">
+                                        <div class="monthly-select mnth-year-select-too">
+                                            <div class="custom-select">
+                                                <button class="select-button" (click)="toggleDropdown(0)"
+                                                    aria-labelledby="select button"
+                                                    aria-haspopup="listbox" aria-expanded="false"
+                                                    aria-controls="select-dropdown">
+                                                    <span>Month:</span>
+                                                    <span class="selected-value">Select</span>
+                                                    <span class="dropdown-arrow"></span>
+                                                </button>
+                                                <ul class="select-dropdown" *ngIf="togglesdrop[0].state===true">
+                                                    <li>
+                                                        <input type="radio" id="January" name="" />
+                                                        <label for="January">January</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="February" name="" />
+                                                        <label for="February">February</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="March" name="" />
+                                                        <label for="March">March</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="April" name="" />
+                                                        <label for="April">April</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="May" name="" />
+                                                        <label for="May">May</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="June" name="" />
+                                                        <label for="June">June</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="July" name="" />
+                                                        <label for="July">July</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="August" name="" />
+                                                        <label for="August">August</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="September" name="" />
+                                                        <label for="September">September</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="October" name="" />
+                                                        <label for="October">October</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="November" name="" />
+                                                        <label for="November">November</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="December" name="" />
+                                                        <label for="December">December</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="monthly-select year-select-too">
+                                            <div class="custom-select">
+                                                <button class="select-button" (click)="toggleDropdown(1)"
+                                                    aria-labelledby="select button"
+                                                    aria-haspopup="listbox" aria-expanded="false"
+                                                    aria-controls="select-dropdown">
+                                                    <span>Year:</span>
+                                                    <span class="selected-value">Select</span>
+                                                    <span class="dropdown-arrow"></span>
+                                                </button>
+                                                <ul class="select-dropdown" *ngIf="togglesdrop[1].state===true">
+                                                    <li>
+                                                        <input type="radio" id="2024" name="" />
+                                                        <label for="2024">2024</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="2023" name="" />
+                                                        <label for="2023">2023</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="2022" name="" />
+                                                        <label for="2022">2022</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="2021" name="" />
+                                                        <label for="2021">2021</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xxl-12">
+                                    
+                                            <div class="issuance_WPC_targets">
+                                                <div class="row">
+                                                    <div class="col-md-4 issuance_WPC_achievement">
+                                                        Issuance WPC Achievement
+                                                        <h2> 64.25% </h2>
+                                                    </div>
+                                                    <div class="col-md-4 col-6">
+                                                        <div class="issuance_target">
+                                                            <p>Issuance WPC Target</p>
+                                                            <h5> ₹2,58,400 </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-6">
+                                                        <div class="issuance_premium MarketUp ytd-premium">
+                                                            <p>Issuance WPC Premium</p>
+                                                            <h5>₹22,23,952 </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="wpc-info-number">
+                                                <p><img src="../../../assets/images/icons/wpc-Info.svg" alt=""> Congratulations on achieving 85% on issuance WPC target, Achieve additional <strong>01 issuance WPC </strong> achieve 100% with an opportunity to get additional payout</p>
+                                            </div>
+                                    
+                                            <div class="four-boxes-rolling">
+                                                <div class="row">
+                                                    <div class="col-xl-3 col-md-6 col-6">
+                                                        <div class="issuance_WPC_targeted_data ">
+                                                            <div class="icon money-recive-wpc"></div>
+                                                            <p>Dual Credit WPC</p>
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                            <div class="value">
+                                                                ₹ 3,39,480
+                                                                <a href="#">
+                                                                    <img src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-md-6 col-6">
+                                                        <div class="issuance_WPC_targeted_data ">
+                                                            <div class="icon receipt-search-wpc"></div>
+                                                            <p>Total WPC</p>
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                            <div class="value">
+                                                                ₹ 3,39,480
+                                                                <a href="#">
+                                                                    <img src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-md-6 col-6">
+                                                        <div class="issuance_WPC_targeted_data ">
+                                                            <div class="icon Persistency"></div>
+                                                            <p>13th Month Rolling Persistency</p>
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                            <div class="value">
+                                                                89.97%
+                                                                <a href="#">
+                                                                    <img src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-md-6 col-6">
+                                                        <div class="issuance_WPC_targeted_data">
+                                                            <div class="icon Branch"></div>
+                                                            <p>Activation • <strong>Branch</strong></p>
+                                                              <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                            <div class="value">
+                                                                05
+                                                                <a href="#"><img
+                                                                        src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt=""></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <!-- Graph data MTD -->
+                                    <div class="row business-shot-table-data">
+
+                                        <div class="col-xxl-6 col-lg-6">
+                                            <div class="row">
+
+                                                <!-- graph-tabs Issuance -->
+                                                <div class="col-xxl-12 col-lg-12">
+                                                    <div class="graph-tabs-main">
+
+                                                        <div class="graph-tabs-main-head">
+                                                            <img src="../../../assets/images/table-icons/Issuance-table-icon.png"
+                                                                alt=""> Issuance
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn tooltip-graph" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                        </div>
+
+                                                        <!--graph Tabs -->
+                                                        <div class="graph-tabs-issuance">
+                                                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link active" id="pills-wpc-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-wpc"
+                                                                        type="button" role="tab" aria-controls="pills-wpc"
+                                                                        aria-selected="true">WPC</button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link " id="pills-nop-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-nop"
+                                                                        type="button" role="tab" aria-controls="pills-nop"
+                                                                        aria-selected="false">NOP</button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link " id="pills-rnb-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-rnb"
+                                                                        type="button" role="tab" aria-controls="pills-rnb"
+                                                                        aria-selected="false">RNB</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="tab-content graph-tabs-inner-content" id="pills-tabContent">
+
+                                                            <!-- WPC -->
+                                                            <div class="tab-pane fade show active" id="pills-wpc"
+                                                                role="tabpanel" aria-labelledby="pills-wpc-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total WPC
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+
+                                                                <!-- <div id="chartIssuance"></div> -->
+                                                                <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <!-- NOP -->
+                                                            <div class="tab-pane fade" id="pills-nop" role="tabpanel"
+                                                                aria-labelledby="pills-nop-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total NOP
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+                                                                <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+                                                                <!-- <img src="../../../assets/images/dammy-graph.png" alt=""> -->
+                                                            </div>
+
+                                                            <!-- RNB -->
+                                                            <div class="tab-pane fade" id="pills-rnb" role="tabpanel"
+                                                                aria-labelledby="pills-rnb-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total RNB
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+                                                                <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+                                                                <!-- <img src="../../../assets/images/dammy-graph.png" alt=""> -->
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- graph-tabs Quality -->
+                                                <div class="col-xxl-12 col-lg-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="2" class="head-icon-text"><img
+                                                                            src="../../../assets/images/table-icons/quality-table-icon.png"
+                                                                            alt=""> Quality
+                                                                        <!-- tooltip -->
+                                                                        <button type="button" class="tooltip-btn tooltip-graph" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                            <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                        </button>
+                                                                        <!-- tooltip -->
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>13th month rolling persistency %</th>
+                                                                    <td>89%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>25th month persistency %</th>
+                                                                    <td>65%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Dead business WPC</th>
+                                                                    <td>₹-2,50,000</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Grievance complaints</th>
+                                                                    <td>05</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                <!-- graph-tabs Others -->
+                                                <div class="col-xxl-12 col-lg-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="2" class="head-icon-text"><img
+                                                                            src="../../../assets/images/table-icons/other-table-icon.png"
+                                                                            alt=""> Other
+                                                                        <!-- tooltip -->
+                                                                        <button type="button" class="tooltip-btn tooltip-graph" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                            <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                        </button>
+                                                                        <!-- tooltip -->
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Market share</th>
+                                                                    <td>89%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Rider attachment NOP</th>
+                                                                    <td>03</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Rider attachment premium %</th>
+                                                                    <td>70%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>LCR%</th>
+                                                                    <td>-18%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Mandate registration %</th>
+                                                                    <td>90%</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+        
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xxl-6 col-lg-6">
+                                            <div class="row">
+
+                                                <!-- graph-tabs Login -->
+                                                <div class="col-xxl-12 col-lg-12">
+                                                    <div class="graph-tabs-main">
+
+                                                        <div class="graph-tabs-main-head">
+                                                            <img src="../../../assets/images/table-icons/star-table-icon.png"
+                                                                alt=""> Login
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn tooltip-graph" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                        </div>
+
+                                                        <!--graph Tabs -->
+                                                        <div class="graph-tabs-issuance">
+                                                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link active" id="pills-wpc-login-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-wpc-login"
+                                                                        type="button" role="tab" aria-controls="pills-wpc-login"
+                                                                        aria-selected="true">WPC</button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link " id="pills-nop-login-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-nop-login"
+                                                                        type="button" role="tab" aria-controls="pills-nop-login"
+                                                                        aria-selected="false">NOP</button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link " id="pills-rnb-login-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-rnb-login"
+                                                                        type="button" role="tab" aria-controls="pills-rnb-login"
+                                                                        aria-selected="false">RNB</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="tab-content graph-tabs-inner-content" id="pills-tabContent">
+
+                                                            <!-- WPC -->
+                                                            <div class="tab-pane fade show active" id="pills-wpc-login"
+                                                                role="tabpanel" aria-labelledby="pills-wpc-login-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total WPC
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+                                                                <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+                                                                <!-- <img src="../../../assets/images/dammy-graph.png" alt=""> -->
+                                                            </div>
+
+                                                            <!-- NOP -->
+                                                            <div class="tab-pane fade" id="pills-nop-login" role="tabpanel"
+                                                                aria-labelledby="pills-nop-login-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total NOP
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+                                                                <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+                                                                <!-- <img src="../../../assets/images/dammy-graph.png" alt=""> -->
+                                                            </div>
+
+                                                            <!-- RNB -->
+                                                            <div class="tab-pane fade" id="pills-rnb-login" role="tabpanel"
+                                                                aria-labelledby="pills-rnb-login-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total RNB
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+                                                                    <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+                                                                <!-- <img src="../../../assets/images/dammy-graph.png" alt=""> -->
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                 <!-- graph Product Mix-->
+                                                <div class="col-xxl-12 col-lg-12">
+                                                    <div class="graph-tabs-main">
+
+                                                        <div class="graph-tabs-main-head border-bottom-no-tabs">
+                                                            <img src="../../../assets/images/table-icons/product-mix-table-icon.png"
+                                                                alt=""> Product Mix
+                                                                <!-- tooltip -->
+                                                                <button type="button" class="tooltip-btn tooltip-graph" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                    <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                </button>
+                                                                <!-- tooltip -->
+                                                        </div>
+
+                                                        <div class="no-tabs-graph">
+                                                            <!-- <img src="../../../assets/images/dammy-graph-3.png" alt=""> -->
+                                                            <div class="d-flex justify-content-center align-items-center">
+                                                                <canvas *ngIf="isBrowser" baseChart
+                                                                    [labels]="doughnutChartLabelsNew"
+                                                                    [datasets]="doughnutChartDatasetsNew"
+                                                                    [options]="doughnutChartOptionsNew"
+                                                                    [legend]="false"
+                                                                    [type]="'doughnut'" style="height: 200px; cursor: pointer; ">
+                                                                </canvas>
+                                                                <div class="product-mix-info-right">
+                                                                    <ul>
+                                                                        <li class="ulip">ULIP <strong>30%</strong></li>
+                                                                        <li class="term">Term <strong>25%</strong></li>
+                                                                        <li class="par">Par <strong>15%</strong></li>
+                                                                        <li class="non-par">Non par <strong>15%</strong></li>
+                                                                        <li class="annuity">Annuity <strong>15%</strong></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+
+                                <!-- YTD -->
+                                <div class="tab-pane fade" id="pills-graphytd" role="tabpanel"
+                                    aria-labelledby="pills-graphytd-tab">
+
+                                    <!-- Financial Year -->
+                                    <div class="row">
+                                        <div class="monthly-select financial-year">
+                                            <div class="custom-select">
+                                                <button class="select-button" (click)="toggleDropdown(2)"
+                                                    [ngClass]="{'arrow-up': togglesdrop[2].state}"
+                                                    aria-labelledby="select button"
+                                                    aria-haspopup="listbox" aria-expanded="false"
+                                                    aria-controls="select-dropdown">
+                                                    <span>Financial Year:</span>
+                                                    <span class="selected-value">2024 (Current)</span>
+                                                    <span class="dropdown-arrow"></span>
+                                                </button>
+                                                <ul class="select-dropdown" *ngIf="togglesdrop[2].state===true">
+                                                    <li>
+                                                        <input type="radio" id="January" name="" />
+                                                        <label for="January">2020</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="February" name="" />
+                                                        <label for="February">2021</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="March" name="" />
+                                                        <label for="March">2022</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="current" name="" />
+                                                        <label for="current">Current</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                       
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xxl-12">
+
+                                            <div class="issuance_WPC_targets">
+                                                <div class="row">
+                                                    <div class="col-md-4 issuance_WPC_achievement">
+                                                        Issuance WPC Achievement
+                                                        <h2> 141.92%</h2>
+                                                    </div>
+                                                    <div class="col-md-4 col-6">
+                                                        <div class="issuance_target">
+                                                            <p>Issuance WPC Target</p>
+                                                            <h5> ₹2,58,400 </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-6">
+                                                        <div class="issuance_premium MarketUp ytd-premium">
+                                                            <p>Issuance WPC Premium</p>
+                                                            <h5>₹22,23,952</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="four-boxes-rolling two-boxes-rolling-ytd">
+                                                <div class="row">
+                                                    <div class="col-xl-4 col-md-6 col-6">
+                                                        <div class="issuance_WPC_targeted_data ">
+                                                            <div class="icon money-recive-wpc"></div>
+                                                            <p>Dual Credit WPC</p>
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                            <div class="value">
+                                                                ₹ 3,39,480
+                                                                <a href="#">
+                                                                    <img src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6 col-6">
+                                                        <div class="issuance_WPC_targeted_data ">
+                                                            <div class="icon receipt-search-wpc"></div>
+                                                            <p>Total WPC</p>
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                            <div class="value">
+                                                                ₹ 3,39,480
+                                                                <a href="#">
+                                                                    <img src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6 col-6">
+                                                        <div class="issuance_WPC_targeted_data ">
+                                                            <div class="icon Persistency"></div>
+                                                            <p>13th Month Rolling Persistency</p>
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                            <div class="value">
+                                                                89.97%
+                                                                <a href="#">
+                                                                    <img src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Graph data YTD -->
+                                    <div class="row business-shot-table-data">
+
+                                        <!-- Issuance Graph Tabs -->
+                                        <div class="col-xxl-12 col-lg-12">
+                                            <div class="graph-tabs-main">
+
+                                                <div class="graph-tabs-main-head">
+                                                    <img src="../../../assets/images/table-icons/Issuance-table-icon.png"
+                                                        alt=""> Issuance
+                                                </div>
+
+                                                <!--graph Tabs -->
+                                                <div class="graph-tabs-issuance">
+                                                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link active" id="pills-wpc-monthly-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-monthly-wpc" type="button"
+                                                                role="tab" aria-controls="pills-monthly-wpc"
+                                                                aria-selected="true">WPC</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link " id="pills-monthly-nop-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-monthly-nop" type="button"
+                                                                role="tab" aria-controls="pills-monthly-nop"
+                                                                aria-selected="false">NOP</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link " id="pills-rnb-monthly-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-monthly-rnb" type="button"
+                                                                role="tab" aria-controls="pills-monthly-rnb"
+                                                                aria-selected="false">RNB</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="tab-content graph-tabs-inner-content" id="pills-tabContent">
+
+                                                    <!-- WPC -->
+                                                    <div class="tab-pane fade show active" id="pills-monthly-wpc"
+                                                        role="tabpanel" aria-labelledby="pills-wpc-monthly-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Total WPC
+                                                                    Premium</p>
+                                                                <span>₹24,91,799</span>
+                                                            </div>
+                                                            <p class="values-lakh">*All values are in lakhs
+                                                            </p>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                    <!-- NOP -->
+                                                    <div class="tab-pane fade" id="pills-monthly-nop" role="tabpanel"
+                                                        aria-labelledby="pills-nop-monthly-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Total NOP
+                                                                    Premium</p>
+                                                                <span>₹24,91,799</span>
+                                                            </div>
+                                                            <p class="values-lakh">*All values are in lakhs
+                                                            </p>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                    <!-- RNB -->
+                                                    <div class="tab-pane fade" id="pills-monthly-rnb" role="tabpanel"
+                                                        aria-labelledby="pills-rnb-monthly-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Total RNB
+                                                                    Premium</p>
+                                                                <span>₹24,91,799</span>
+                                                            </div>
+                                                            <p class="values-lakh">*All values are in lakhs
+                                                            </p>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- Login Graph Tabs -->
+                                        <div class="col-xxl-12 col-lg-12">
+                                            <div class="graph-tabs-main">
+
+                                                <div class="graph-tabs-main-head">
+                                                    <img src="../../../assets/images/table-icons/star-table-icon.png"
+                                                        alt=""> Login
+                                                </div>
+
+                                                <!--graph Tabs -->
+                                                <div class="graph-tabs-issuance">
+                                                    <ul class="nav nav-pills" id="pills-login-tab" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link active" id="pills-wpc-login-tab"
+                                                                data-bs-toggle="pill" data-bs-target="#pills-login-wpc"
+                                                                type="button" role="tab" aria-controls="pills-login-wpc"
+                                                                aria-selected="true">WPC</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link " id="pills-login-nop-tab"
+                                                                data-bs-toggle="pill" data-bs-target="#pills-login-nop"
+                                                                type="button" role="tab" aria-controls="pills-login-nop"
+                                                                aria-selected="false">NOP</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link " id="pills-rnb-login-tab"
+                                                                data-bs-toggle="pill" data-bs-target="#pills-login-rnb"
+                                                                type="button" role="tab" aria-controls="pills-login-rnb"
+                                                                aria-selected="false">RNB</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="tab-content graph-tabs-inner-content" id="pills-tabContent">
+
+                                                    <!-- WPC -->
+                                                    <div class="tab-pane fade show active" id="pills-login-wpc"
+                                                        role="tabpanel" aria-labelledby="pills-wpc-login-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Total WPC
+                                                                    Premium</p>
+                                                                <span>₹24,91,799</span>
+                                                            </div>
+                                                            <p class="values-lakh">*All values are in lakhs
+                                                            </p>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                    <!-- NOP -->
+                                                    <div class="tab-pane fade" id="pills-login-nop" role="tabpanel"
+                                                        aria-labelledby="pills-nop-login-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Total NOP
+                                                                    Premium</p>
+                                                                <span>₹24,91,799</span>
+                                                            </div>
+                                                            <p class="values-lakh">*All values are in lakhs
+                                                            </p>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                    <!-- RNB -->
+                                                    <div class="tab-pane fade" id="pills-login-rnb" role="tabpanel"
+                                                        aria-labelledby="pills-rnb-login-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Total RNB
+                                                                    Premium</p>
+                                                                <span>₹24,91,799</span>
+                                                            </div>
+                                                            <p class="values-lakh">*All values are in lakhs
+                                                            </p>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- Quality Graph Tabs -->
+                                        <div class="col-xxl-12 col-lg-12">
+                                            <div class="graph-tabs-main">
+
+                                                <div class="graph-tabs-main-head">
+                                                    <img src="../../../assets/images/table-icons/star-table-icon.png"
+                                                        alt=""> Quality
+                                                </div>
+
+                                                <!--graph Tabs -->
+                                                <div class="graph-tabs-issuance graph-fourtabs-issuance">
+                                                    <ul class="nav nav-pills" id="pills-quality-tab" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link active" id="pills-month-quality-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-quality-month" type="button"
+                                                                role="tab" aria-controls="pills-quality-month"
+                                                                aria-selected="true">13th month persistency %</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link " id="pills-quality-persistency-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-quality-persistency"
+                                                                type="button" role="tab"
+                                                                aria-controls="pills-quality-persistency"
+                                                                aria-selected="false">25th month persistency %</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link " id="pills-business-quality-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-quality-business" type="button"
+                                                                role="tab" aria-controls="pills-quality-business"
+                                                                aria-selected="false">Dead business WPC</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link " id="pills-complaints-quality-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-quality-complaints" type="button"
+                                                                role="tab" aria-controls="pills-quality-complaints"
+                                                                aria-selected="false">Grievance complaints</button>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+                                                <div class="tab-content graph-tabs-inner-content" id="pills-tabContent">
+
+                                                    <!-- persistency -->
+                                                    <div class="tab-pane fade show active" id="pills-quality-month"
+                                                        role="tabpanel" aria-labelledby="pills-month-quality-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Average 13th month
+                                                                    persistency %</p>
+                                                                <span>89%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                    <!-- persistency -->
+                                                    <div class="tab-pane fade" id="pills-quality-persistency"
+                                                        role="tabpanel" aria-labelledby="pills-persistency-quality-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Average 13th month
+                                                                    persistency %</p>
+                                                                <span>89%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                    <!-- persistency -->
+                                                    <div class="tab-pane fade" id="pills-quality-business"
+                                                        role="tabpanel" aria-labelledby="pills-business-quality-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Average 13th month
+                                                                    persistency %</p>
+                                                                <span>89%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                    <!-- persistency -->
+                                                    <div class="tab-pane fade" id="pills-quality-complaints"
+                                                        role="tabpanel" aria-labelledby="pills-complaints-quality-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Average 13th month
+                                                                    persistency %</p>
+                                                                <span>89%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- graph Product Mix-->
+                                        <div class="col-xxl-12 col-lg-12">
+                                            <div class="graph-tabs-main">
+
+                                                <div class="graph-tabs-main-head border-bottom-no-tabs">
+                                                    <img src="../../../assets/images/table-icons/product-mix-table-icon.png"
+                                                        alt=""> Product Mix
+                                                </div>
+
+                                                <div class="no-tabs-graph">
+                                                    <div class="no-tabs-graph">
+                                                        <!-- <img src="../../../assets/images/dammy-graph-3.png" alt=""> -->
+                                                        <div class="d-flex mix-product-full">
+                                                            <canvas *ngIf="isBrowser" baseChart
+                                                                [labels]="doughnutChartLabelsNew"
+                                                                [datasets]="doughnutChartDatasetsNew"
+                                                                [options]="doughnutChartOptionsNew"
+                                                                [legend]="false"
+                                                                [type]="'doughnut'" style="height: 180px; cursor: pointer; ">
+                                                            </canvas>
+                                                            <div class="product-mix-info-right mix-product-full">
+                                                                <ul>
+                                                                    <li class="ulip">ULIP <strong>30%</strong></li>
+                                                                    <li class="term">Term <strong>25%</strong></li>
+                                                                    <li class="par">Par <strong>15%</strong></li>
+                                                                    <li class="non-par">Non par <strong>15%</strong></li>
+                                                                    <li class="annuity">Annuity <strong>15%</strong></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div style="display: block">
+                                                        <canvas *ngIf="isBrowser" baseChart 
+                                                                [data]="barChartDataProductYtd"
+                                                                [options]="barChartOptionsProductYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                        </canvas>
+                                                    </div>
+                                                    <!-- <div id="chartYtd_Product_Mix"></div> -->
+
+                                                    <!-- <img src="../../../assets/images/dammy-graph-2.png" alt=""> -->
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                        <!-- Other Graph Tabs -->
+                                        <div class="col-xxl-12 col-lg-12">
+                                            <div class="graph-tabs-main">
+
+                                                <div class="graph-tabs-main-head">
+                                                    <img src="../../../assets/images/table-icons/other-table-icon.png"
+                                                        alt=""> Other
+                                                </div>
+
+                                                <!--graph Tabs -->
+                                                <div class="graph-tabs-issuance graph-fivetabs-issuance">
+                                                    <ul class="nav nav-pills" id="pills-quality-tab" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link active" id="pills-share-quality-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-quality-share" type="button"
+                                                                role="tab" aria-controls="pills-quality-share"
+                                                                aria-selected="true">Market share</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link " id="pills-quality-attachment-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-quality-attachment" type="button"
+                                                                role="tab" aria-controls="pills-quality-attachment"
+                                                                aria-selected="false">Rider attachment NOP</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link " id="pills-premium-quality-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-quality-premium" type="button"
+                                                                role="tab" aria-controls="pills-quality-premium"
+                                                                aria-selected="false">Rider attachment premium
+                                                                %</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link " id="pills-lcr-quality-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-quality-lcr" type="button"
+                                                                role="tab" aria-controls="pills-quality-lcr"
+                                                                aria-selected="false">LCR%</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <button class="nav-link "
+                                                                id="pills-registration-quality-tab"
+                                                                data-bs-toggle="pill"
+                                                                data-bs-target="#pills-quality-registration"
+                                                                type="button" role="tab"
+                                                                aria-controls="pills-quality-registration"
+                                                                aria-selected="false">Mandate registration %</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="tab-content graph-tabs-inner-content" id="pills-tabContent">
+
+                                                    <!-- Market -->
+                                                    <div class="tab-pane fade show active" id="pills-quality-share"
+                                                        role="tabpanel" aria-labelledby="pills-share-quality-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Average market share</p>
+                                                                <span>47%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                    <!-- Rider -->
+                                                    <div class="tab-pane fade" id="pills-quality-attachment"
+                                                        role="tabpanel" aria-labelledby="pills-attachment-quality-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Average market share</p>
+                                                                <span>47%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                    <!-- premium -->
+                                                    <div class="tab-pane fade" id="pills-quality-premium"
+                                                        role="tabpanel" aria-labelledby="pills-premium-quality-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Average market share</p>
+                                                                <span>47%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                    <!-- LCR -->
+                                                    <div class="tab-pane fade" id="pills-quality-lcr" role="tabpanel"
+                                                        aria-labelledby="pills-lcr-quality-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Average market share</p>
+                                                                <span>47%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                    <!-- Mandate -->
+                                                    <div class="tab-pane fade" id="pills-quality-registration"
+                                                        role="tabpanel"
+                                                        aria-labelledby="pills-registration-quality-tab">
+                                                        <div class="wpc-premium">
+                                                            <div>
+                                                                <p class="totsl-premium-para">Average market share</p>
+                                                                <span>47%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="display: block">
+                                                            <canvas *ngIf="isBrowser" baseChart 
+                                                            [data]="barChartDataYtd"
+                                                                [options]="barChartOptionsYtd" 
+                                                                [plugins]="barChartPlugins"
+                                                                [legend]="barChartLegend" [legend]="false"
+                                                                [type]="'bar'"
+                                                                style="height: 70px; cursor: pointer; width: 100%;">
+                                                            </canvas>
+                                                        </div>
+                                                        <!-- <img src="../../../assets/images/dammy-graph-1.png" alt=""> -->
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Monthly -->
+                                <div class="tab-pane fade" id="pills-graphmonthly" role="tabpanel"
+                                    aria-labelledby="pills-graphmonthly-tab">
+
+                                    <div class="row">
+                                        <div class="monthly-select mnth-year-select-too">
+                                            <div class="custom-select">
+                                                <button class="select-button" (click)="toggleDropdown(0)"
+                                                    [ngClass]="{'arrow-up': togglesdrop[0].state}"
+                                                    aria-labelledby="select button"
+                                                    aria-haspopup="listbox" aria-expanded="false"
+                                                    aria-controls="select-dropdown">
+                                                    <span>Month:</span>
+                                                    <span class="selected-value">Select</span>
+                                                    <span class="dropdown-arrow"></span>
+                                                </button>
+                                                <ul class="select-dropdown" *ngIf="togglesdrop[0].state===true">
+                                                    <li>
+                                                        <input type="radio" id="January" name="" />
+                                                        <label for="January">January</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="February" name="" />
+                                                        <label for="February">February</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="March" name="" />
+                                                        <label for="March">March</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="April" name="" />
+                                                        <label for="April">April</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="May" name="" />
+                                                        <label for="May">May</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="June" name="" />
+                                                        <label for="June">June</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="July" name="" />
+                                                        <label for="July">July</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="August" name="" />
+                                                        <label for="August">August</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="September" name="" />
+                                                        <label for="September">September</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="October" name="" />
+                                                        <label for="October">October</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="November" name="" />
+                                                        <label for="November">November</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="December" name="" />
+                                                        <label for="December">December</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="monthly-select year-select-too">
+                                            <div class="custom-select">
+                                                <button class="select-button" (click)="toggleDropdown(1)"
+                                                    [ngClass]="{'arrow-up': togglesdrop[1].state}"
+                                                    aria-labelledby="select button"
+                                                    aria-haspopup="listbox" aria-expanded="false"
+                                                    aria-controls="select-dropdown">
+                                                    <span>Year:</span>
+                                                    <span class="selected-value">Select</span>
+                                                    <span class="dropdown-arrow"></span>
+                                                </button>
+                                                <ul class="select-dropdown" *ngIf="togglesdrop[1].state===true">
+                                                    <li>
+                                                        <input type="radio" id="2024" name="" />
+                                                        <label for="2024">2024</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="2023" name="" />
+                                                        <label for="2023">2023</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="2022" name="" />
+                                                        <label for="2022">2022</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="2021" name="" />
+                                                        <label for="2021">2021</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xxl-12">
+                                    
+                                            <div class="issuance_WPC_targets">
+                                                <div class="row">
+                                                    <div class="col-md-4 issuance_WPC_achievement">
+                                                        Issuance WPC Achievement
+                                                        <h2> 70.56% </h2>
+                                                    </div>
+                                                    <div class="col-md-4 col-6">
+                                                        <div class="issuance_target">
+                                                            <p>Issuance WPC Target</p>
+                                                            <h5> ₹2,58,400 </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-6">
+                                                        <div class="issuance_premium MarketUp ytd-premium">
+                                                            <p>Issuance WPC Premium</p>
+                                                            <h5>₹22,23,952 </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="four-boxes-rolling">
+                                                <div class="row">
+                                                    <div class="col-xl-3 col-md-6 col-6">
+                                                        <div class="issuance_WPC_targeted_data ">
+                                                            <div class="icon money-recive-wpc"></div>
+                                                            <p>Dual Credit WPC</p>
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                            <div class="value">
+                                                                ₹ 3,39,480
+                                                                <a href="#">
+                                                                    <img src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-md-6 col-6">
+                                                        <div class="issuance_WPC_targeted_data ">
+                                                            <div class="icon receipt-search-wpc"></div>
+                                                            <p>Total WPC</p>
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                            <div class="value">
+                                                                ₹ 3,39,480
+                                                                <a href="#">
+                                                                    <img src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-md-6 col-6">
+                                                        <div class="issuance_WPC_targeted_data ">
+                                                            <div class="icon Persistency"></div>
+                                                            <p>13th Month Rolling Persistency</p>
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                            <div class="value">
+                                                                89.97%
+                                                                <a href="#">
+                                                                    <img src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3 col-md-6 col-6">
+                                                        <div class="issuance_WPC_targeted_data">
+                                                            <div class="icon Branch"></div>
+                                                            <p>Activation • <strong>Branch</strong></p>
+                                                              <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                            <div class="value">
+                                                                05
+                                                                <a href="#"><img
+                                                                        src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt=""></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <!-- Graph data MTD -->
+                                    <div class="row business-shot-table-data">
+
+                                        <div class="col-xxl-6 col-lg-6">
+                                            <div class="row">
+
+                                                <!-- graph-tabs Issuance -->
+                                                <div class="col-xxl-12 col-lg-12">
+                                                    <div class="graph-tabs-main">
+
+                                                        <div class="graph-tabs-main-head">
+                                                            <img src="../../../assets/images/table-icons/Issuance-table-icon.png"
+                                                                alt=""> Issuance
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn tooltip-graph" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                        </div>
+
+                                                        <!--graph Tabs -->
+                                                        <div class="graph-tabs-issuance">
+                                                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link active" id="pills-wpc-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-wpc"
+                                                                        type="button" role="tab" aria-controls="pills-wpc"
+                                                                        aria-selected="true">WPC</button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link " id="pills-nop-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-nop"
+                                                                        type="button" role="tab" aria-controls="pills-nop"
+                                                                        aria-selected="false">NOP</button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link " id="pills-rnb-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-rnb"
+                                                                        type="button" role="tab" aria-controls="pills-rnb"
+                                                                        aria-selected="false">RNB</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="tab-content graph-tabs-inner-content" id="pills-tabContent">
+
+                                                            <!-- WPC -->
+                                                            <div class="tab-pane fade show active" id="pills-wpc"
+                                                                role="tabpanel" aria-labelledby="pills-wpc-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total WPC
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+
+                                                                <!-- <div id="chartIssuance"></div> -->
+                                                                <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <!-- NOP -->
+                                                            <div class="tab-pane fade" id="pills-nop" role="tabpanel"
+                                                                aria-labelledby="pills-nop-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total NOP
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+                                                                <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+                                                                <!-- <img src="../../../assets/images/dammy-graph.png" alt=""> -->
+                                                            </div>
+
+                                                            <!-- RNB -->
+                                                            <div class="tab-pane fade" id="pills-rnb" role="tabpanel"
+                                                                aria-labelledby="pills-rnb-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total RNB
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+                                                                <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+                                                                <!-- <img src="../../../assets/images/dammy-graph.png" alt=""> -->
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- graph-tabs Quality -->
+                                                <div class="col-xxl-12 col-lg-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="2" class="head-icon-text"><img
+                                                                            src="../../../assets/images/table-icons/quality-table-icon.png"
+                                                                            alt=""> Quality
+                                                                        <!-- tooltip -->
+                                                                        <button type="button" class="tooltip-btn tooltip-graph" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                            <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                        </button>
+                                                                        <!-- tooltip -->
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>13th month rolling persistency %</th>
+                                                                    <td>89%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>25th month persistency %</th>
+                                                                    <td>65%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Dead business WPC</th>
+                                                                    <td>₹-2,50,000</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Grievance complaints</th>
+                                                                    <td>05</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                <!-- graph-tabs Others -->
+                                                <div class="col-xxl-12 col-lg-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="2" class="head-icon-text"><img
+                                                                            src="../../../assets/images/table-icons/other-table-icon.png"
+                                                                            alt=""> Other
+                                                                        <!-- tooltip -->
+                                                                        <button type="button" class="tooltip-btn tooltip-graph" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                            <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                        </button>
+                                                                        <!-- tooltip -->
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Market share</th>
+                                                                    <td>89%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Rider attachment NOP</th>
+                                                                    <td>03</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Rider attachment premium %</th>
+                                                                    <td>70%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>LCR%</th>
+                                                                    <td>-18%</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Mandate registration %</th>
+                                                                    <td>90%</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+        
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xxl-6 col-lg-6">
+                                            <div class="row">
+
+                                                <!-- graph-tabs Login -->
+                                                <div class="col-xxl-12 col-lg-12">
+                                                    <div class="graph-tabs-main">
+
+                                                        <div class="graph-tabs-main-head">
+                                                            <img src="../../../assets/images/table-icons/star-table-icon.png"
+                                                                alt=""> Login
+                                                            <!-- tooltip -->
+                                                            <button type="button" class="tooltip-btn tooltip-graph" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                            </button>
+                                                            <!-- tooltip -->
+                                                        </div>
+
+                                                        <!--graph Tabs -->
+                                                        <div class="graph-tabs-issuance">
+                                                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link active" id="pills-wpc-login-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-wpc-login"
+                                                                        type="button" role="tab" aria-controls="pills-wpc-login"
+                                                                        aria-selected="true">WPC</button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link " id="pills-nop-login-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-nop-login"
+                                                                        type="button" role="tab" aria-controls="pills-nop-login"
+                                                                        aria-selected="false">NOP</button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                    <button class="nav-link " id="pills-rnb-login-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#pills-rnb-login"
+                                                                        type="button" role="tab" aria-controls="pills-rnb-login"
+                                                                        aria-selected="false">RNB</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="tab-content graph-tabs-inner-content" id="pills-tabContent">
+
+                                                            <!-- WPC -->
+                                                            <div class="tab-pane fade show active" id="pills-wpc-login"
+                                                                role="tabpanel" aria-labelledby="pills-wpc-login-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total WPC
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+                                                                <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+                                                                <!-- <img src="../../../assets/images/dammy-graph.png" alt=""> -->
+                                                            </div>
+
+                                                            <!-- NOP -->
+                                                            <div class="tab-pane fade" id="pills-nop-login" role="tabpanel"
+                                                                aria-labelledby="pills-nop-login-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total NOP
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+                                                                <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+                                                                <!-- <img src="../../../assets/images/dammy-graph.png" alt=""> -->
+                                                            </div>
+
+                                                            <!-- RNB -->
+                                                            <div class="tab-pane fade" id="pills-rnb-login" role="tabpanel"
+                                                                aria-labelledby="pills-rnb-login-tab">
+                                                                <div class="wpc-premium">
+                                                                    <div>
+                                                                        <p class="totsl-premium-para">Total RNB
+                                                                            Premium</p>
+                                                                        <span>₹24,91,799</span>
+                                                                    </div>
+                                                                    <p class="values-lakh">*All values are in lakhs
+                                                                    </p>
+                                                                </div>
+                                                                    <div style="display: block">
+
+                                                                    <canvas *ngIf="isBrowser" baseChart [data]="barChartData"
+                                                                        [options]="barChartOptions" [plugins]="barChartPlugins"
+                                                                        [legend]="barChartLegend" [legend]="false"
+                                                                        [type]="'bar'"
+                                                                        style="height: 12vh; cursor: pointer; width: 100%;">
+                                                                    </canvas>
+                                                                </div>
+                                                                <!-- <img src="../../../assets/images/dammy-graph.png" alt=""> -->
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                 <!-- graph Product Mix-->
+                                                <div class="col-xxl-12 col-lg-12">
+                                                    <div class="graph-tabs-main">
+
+                                                        <div class="graph-tabs-main-head border-bottom-no-tabs">
+                                                            <img src="../../../assets/images/table-icons/product-mix-table-icon.png"
+                                                                alt=""> Product Mix
+                                                                <!-- tooltip -->
+                                                                <button type="button" class="tooltip-btn tooltip-graph" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                    <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                </button>
+                                                                <!-- tooltip -->
+                                                        </div>
+
+                                                        <div class="no-tabs-graph">
+                                                            <!-- <img src="../../../assets/images/dammy-graph-3.png" alt=""> -->
+                                                            <div class="d-flex justify-content-center align-items-center">
+                                                                <canvas *ngIf="isBrowser" baseChart
+                                                                    [labels]="doughnutChartLabelsNew"
+                                                                    [datasets]="doughnutChartDatasetsNew"
+                                                                    [options]="doughnutChartOptionsNew"
+                                                                    [legend]="false"
+                                                                    [type]="'doughnut'" style="height: 200px; cursor: pointer; ">
+                                                                </canvas>
+                                                                <div class="product-mix-info-right">
+                                                                    <ul>
+                                                                        <li class="ulip">ULIP <strong>30%</strong></li>
+                                                                        <li class="term">Term <strong>25%</strong></li>
+                                                                        <li class="par">Par <strong>15%</strong></li>
+                                                                        <li class="non-par">Non par <strong>15%</strong></li>
+                                                                        <li class="annuity">Annuity <strong>15%</strong></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

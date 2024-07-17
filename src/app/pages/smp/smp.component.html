@@ -1,0 +1,45 @@
+<div>
+    <app-dashboard></app-dashboard>
+
+    <div class="main-right-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-shot">
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="heading1">SMP Report</h1>
+                                <span class="last-date">last updated: 07/10/23</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="data-chart-tabs">
+                                    <div class="user-info-dropdown">
+                                        <!-- <img src="../../../assets/images/notification.svg" alt=""> -->
+                                         <div class="info-flex-user">
+                                            <div>
+                                                <span>Mr. Durgesh Rai</span>
+                                                <p>AM - 83336</p>
+                                            </div>
+                                            <div class="user-info-show" (click)="toggleUserInfoVisibility()" [class.arrow-up]="isUserVisible"> <img src="../../../assets/images/dropdown-arrow-white.svg"></div>
+                                         </div>
+  
+                                         <div class="user-info-show-dropdown" [hidden]="!isUserVisible">
+                                            <p>Designation</p>
+                                            <span>Area Manager</span>
+                                            <p>Department</p>
+                                            <span>CABR</span>
+                                         </div>
+  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

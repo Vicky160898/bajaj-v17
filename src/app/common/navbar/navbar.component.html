@@ -1,0 +1,140 @@
+<div class="new-class-appear" [ngClass]="{ layOverBg: isLayOver }"></div>
+<div class="main-left-nav">
+  <!-- nav open close -->
+
+  <a class="nav-open-close-btn" (click)="toggleNavLeft()" [class.arrow-right]="isLayOver">
+    <img src="../../../assets/images/nav-icons/mobile-menu-arrow.svg" alt="close-icon"/>
+  </a>
+
+  <nav class="inner-nav" [ngClass]="{ 'nav-width': isNavWidth }">
+    <ul [ngClass]="{ '': !isNavbar, 'new-mobile-block': isNavbar }">
+
+      <li class="close-nav-bar-mobile" (click)="toggleShowNavbar(!isNavbar)">
+        <img src="../../../assets/images/close.png" alt="" />
+      </li>
+
+      <li>
+        <a href="#" class="logo"
+          ><img
+            src="../../../assets/images/bajaj-logo.svg"
+            alt="logo"
+            class="image-logo"
+        /></a>
+      </li>
+
+      <!-- mobile user-info -->
+      <li class="show-only-mobile">
+        <div class="show-user-details-in-mobile-nav">
+          <div>
+            <span>Mr. Durgesh Rai</span>
+            <p>AM - 83336</p>
+          </div>
+          <div class="user-active-mobile">Active</div>
+        </div>
+      </li>
+
+      <li routerLinkActive="active-nav" [routerLink]="['/business']">
+        <a class="nav-link-business">My Business</a>
+      </li>
+      <li routerLinkActive="active-nav" [routerLink]="['/performance-matrices']">
+        <a class="nav-link-metrics">Performance Metrics</a>
+      </li>
+
+      <li routerLinkActive="active-nav" [routerLink]="['/incentive']">
+        <a class="nav-link-incentive">Incentive</a>
+      </li>
+
+      <li routerLinkActive="active-nav" [routerLink]="['/goal']">
+        <a class="nav-link-goalsheet">Goalsheet</a>
+      </li>
+
+      <li routerLinkActive="active-nav" [routerLink]="['/smp-report']">
+        <a class="nav-link-smp-report">SMP Report</a>
+      </li>
+
+      <li routerLinkActive="active-nav" [routerLink]="['/persistency']">
+        <a class="nav-link-persistency">Persistency</a>
+      </li>
+
+      <li routerLinkActive="active-nav" [routerLink]="['/dead-business']">
+        <a class="nav-link-dead-business">Dead Business</a>
+      </li>
+
+      <li routerLinkActive="active-nav" [routerLink]="['/profile']">
+        <a class="nav-link-profile">Profile</a>
+      </li>
+
+      <li routerLinkActive="active-nav" [routerLink]="['/faq']">
+        <a class="nav-link-faq">FAQs & SPOC’s</a>
+      </li>
+
+      <li routerLinkActive="active-nav" [routerLink]="['/logout']">
+        <a class="nav-link-logout">Logout</a>
+      </li>
+      
+      <li class="mobile-app-version">Version 1.0.3</li>
+    </ul>
+  </nav>
+  <button class="navbar-toggle" (click)="toggleShowNavbar(!isNavbar)">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <!-- Mobile Nav Bar -->
+  <div class="mobile-bottom-nav">
+    <div class="inner-mobile-bottom-nav">
+      <ul>
+        <li
+          routerLinkActive="active-mobile-nav"
+          [routerLink]="['/business']"
+          class="nav-bottom-link-business"
+        >
+          My Business
+        </li>
+        <li
+          routerLinkActive="active-mobile-nav"
+          [routerLink]="['/incentive']"
+          class="nav-bottom-link-incentive"
+        >
+          Incentive
+        </li>
+        <li
+          routerLinkActive="active-mobile-nav"
+          [routerLink]="['/goal']"
+          class="nav-bottom-link-goalsheet"
+        >
+          Goalsheet
+        </li>
+        <li
+          routerLinkActive="active-mobile-nav"
+          [routerLink]="['/smp-report']"
+          class="nav-bottom-link-smp-report"
+        >
+          SMP Report
+        </li>
+        <li
+          routerLinkActive="active-mobile-nav"
+          [routerLink]="['/profile']"
+          class="nav-bottom-link-profile"
+        >
+          Profile
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- scroll -->
+  <button *ngIf="showButton" (click)="scrollToTop()" class="scroll-to-top">
+    <img src="../../../assets/images/icons/uparrow.png" alt="" /> Back to Top
+  </button>
+
+  <!-- Raise an Issue -->
+  <div class="raise-ticket" (click)="openModal()">
+    <div class="raise-issue-text">
+      <img src="../../../assets/images/icons/raise-issue.svg" alt="" /> Raise an
+      Issue
+    </div>
+  </div>
+  
+</div>
