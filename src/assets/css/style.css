@@ -1631,54 +1631,87 @@ main {
     border-color: #001e331a;
     border-radius: 32px;
     box-shadow: 0px 12px 34px #00000017;
-    margin: 30px 30px;
+    margin: 30px 32px;
 }
 
 .IncentiveBlock {
     background: #005DAC;
-    padding: 32px;
+    padding: 20px;
     border-radius: 32px 0 0 32px;
+    height: 100%;
+    background-color: #005DAC;
+    background-image: url(../images/wave.svg);
+    background-repeat: no-repeat;
+    background-size: 180%;
+}
+
+.earning-block h4{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 23.92px;
+    text-align: left;
+    color: #ffff;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.earning-block span{
+    font-family: Exo;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: left;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.earning-block img{
+    width: 27px;
 }
 
 .Incentive-Matrix {
     background: url(../images/target_bg.png) no-repeat center top, #F3F9FC;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: Exo;
-    padding: 24px;
-    border-radius: 20px;
+    padding: 8px 15px;
+    border-radius: 18px;
     background-size: cover;
+    margin-top: 20px;
+    width: 48%;
+    position: relative;
 }
 
 .Incentive-Matrix h4 {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
-    line-height: 50px;
-    margin-left: 32px;
+    margin-top: 8px;
 }
 
-.Incentive-Matrix h4 span {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 48px;
+.outer-incentive{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #005DAC;
+    justify-content: space-between;
+}
+
+.Incentive-Matrix span {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 8px;
+    display: block;
+    margin-bottom: 0;
 }
 
 .insentive_valuesBlock {
     display: block;
     font-family: Exo;
-    padding: 32px 32px 32px 24px;
+    padding: 25px 32px 25px 24px;
     border-radius: 0 32px 32px 0;
     background: #fff;
 }
 
 .insentive_values {
     background: #F3F9FC;
-    padding: 21px 24px;
+    padding: 18px 20px;
     border-radius: 12px;
     display: flex;
     justify-content: space-between;
@@ -1687,19 +1720,19 @@ main {
 
 .insentive_values h4 {
     font-size: 14px;
-    padding-left: 18px;
+    padding-left: 0px;
     font-weight: 600;
     line-height: normal;
     position: relative;
 }
 
 .insentive_values span {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 22px;
 }
 
-.insentive_values h4::before {
+/* .insentive_values h4::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1716,7 +1749,7 @@ main {
 
 .insentive_values h4.insentive_Label3::before {
     background: #005388;
-}
+} */
 
 .insentive_values h4 span {
     font-size: 18px;
@@ -1742,7 +1775,7 @@ main {
 
 .incentive-data-current tbody th span {
     display: block;
-    font-size: 13px;
+    font-size: 12px;
     padding-top: 3px;
     color: #afafaf;
 }
@@ -1759,8 +1792,7 @@ main {
 .policy-filter-top h2 {
     font-weight: 700;
     font-size: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 15px;
     color: #001F33;
 }
 
