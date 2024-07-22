@@ -134,7 +134,7 @@
     }
 
     .insentives-section {
-        margin: 30px 10px;
+        margin: 30px 20px;
     }
 
     .filter-policies button {
@@ -1250,18 +1250,24 @@
         font-size: 12px;
         font-weight: 600;
         line-height: 16px;
-        margin-left: 16px;
-    }
-
-    .Incentive-Matrix img {
-        height: 88px;
-        width: 88px;
     }
 
     .Incentive-Matrix h4 span {
         font-size: 20px;
         line-height: 26.58px;
         color: #005DAC;
+    }
+
+    .earning-block span {
+        font-size: 22px;
+    }
+
+    .earning-block img {
+        width: 22px;
+    }
+
+    .Incentive-Matrix{
+        margin-top: 15px;
     }
 
     .Incentive-Matrix h4 span img {
