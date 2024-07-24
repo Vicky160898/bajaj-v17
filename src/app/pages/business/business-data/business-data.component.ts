@@ -45,23 +45,27 @@ export class BusinessDataComponent {
         new bootstrap.Tooltip(tooltipTriggerEl);
       });
     }
+
+    // Button Dropdown Toggel
+    if (this.togglesdrop[0].overlay === true) {
+      this.togglesdrop[0].overlay = false;
+    }
   }
   // boostrap tooltip
 
 
-
   togglesdrop = [
-    { name: 'table 1', state: false },
-    { name: 'table 2', state: false },
-    { name: 'table 3', state: false },
-    { name: 'table 4', state: false },
-    { name: 'table 5', state: false },
-    { name: 'table 6', state: false }
+    { name: 'table 1', state: false, overlay: false },
+    { name: 'table 2', state: false, overlay: false },
+    { name: 'table 3', state: false, overlay: false  },
+    { name: 'table 4', state: false, overlay: false  },
+    { name: 'table 5', state: false, overlay: false  },
+    { name: 'table 6', state: false, overlay: false  },
   ];
 
   toggleDropdown(index: number) {
     this.togglesdrop[index].state = !this.togglesdrop[index].state;
-  
+    this.togglesdrop[index].overlay = !this.togglesdrop[index].overlay;
   }
   
 }

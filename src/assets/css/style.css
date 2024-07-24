@@ -55,7 +55,7 @@ main {
     top: 0;
     transition-property: transform, opacity;
     white-space: normal;
-    z-index: 999;
+    z-index: 9;
     background-color: #00000087;
     width: 100%;
     /* backdrop-filter: blur(2px); */
@@ -74,7 +74,7 @@ main {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 999;
+    z-index: 9;
     height: 100vh;
 }
 
@@ -3437,4 +3437,20 @@ main {
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
+}
+
+.overlay{
+    height: 100%;
+    left: 0;
+    outline: none;
+    overflow: auto;
+    padding: 44px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition-property: transform, opacity;
+    white-space: normal;
+    z-index: 9;
+    background-color: #00000087;
+    width: 100%;
 }

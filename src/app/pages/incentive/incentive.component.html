@@ -3,6 +3,15 @@
 
     <div class="main-right-content">
 
+        <div *ngFor="let toggle of toggles; let i = index" 
+            [ngClass]="{'state': toggle.state, 'overlay': toggle.overlay}" 
+            (click)="toggleDropdown(i)">
+        </div>
+        <div *ngFor="let toggle of togglesSearch; let i = index" 
+            [ngClass]="{'state': toggle.state, 'overlay': toggle.overlay}" 
+            (click)="togglesSearchFilter(i)">
+        </div>
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
@@ -1107,13 +1116,13 @@
                                                                                         placeholder="Search for policies or anything">
                                                                                 </div>
                                                                                 <div class="filter-policies ">
-                                                                                    <button (click)="policyDropdown(1)" [ngClass]="{'arrow-up': policytoggles[1].state}"><img
-                                                                                            src="../../../assets/images/icons/filter.png"
+                                                                                    <button (click)="togglesSearchFilter(0)" [ngClass]="{'arrow-up': togglesSearch[0].state}">
+                                                                                        <img src="../../../assets/images/icons/filter.png"
                                                                                             alt="" class="filter-icon"> Filters
                                                                                         <img src="../../../assets/images/dropdown-arrow.svg"
                                                                                             alt="" class="icon-drop">
                                                                                     </button>
-                                                                                    <div class="filter-box" *ngIf="policytoggles[1].state===true">
+                                                                                    <div class="filter-box" *ngIf="togglesSearch[0].state === true">
                     
                                                                                         <div class="form-check">
                                                                                             <input class="form-check-input" type="radio"

@@ -2,6 +2,12 @@
     <app-dashboard></app-dashboard>
     
     <div class="main-right-content" >
+
+        <div *ngFor="let toggle of toggles; let i = index" 
+            [ngClass]="{'state': toggle.state, 'overlay': toggle.overlay}" 
+            (click)="toggleDropdown(i)">
+        </div>
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">

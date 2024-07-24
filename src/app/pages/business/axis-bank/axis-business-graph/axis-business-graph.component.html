@@ -1,3 +1,8 @@
+<div *ngFor="let toggle of togglesdrop; let i = index" 
+    [ngClass]="{'state': toggle.state, 'overlay': toggle.overlay}" 
+    (click)="toggleDropdown(i)">
+</div>
+
 <!-- Business Graph Data -->
 <div class="container-fluid white-main-content">
     <div class="row">

@@ -41,20 +41,27 @@ export class BusinessComponent {
   }
   constructor(private renderer: Renderer2, private elementRef: ElementRef, @Inject(DOCUMENT) private document: Document,) { }
 
+  ngAfterViewInit() {
+    // Button Dropdown Toggel
+    if (this.toggles[0].overlay === true) {
+      this.toggles[0].overlay = false;
+    }
+  }
+
   ngOnInit(): void {  }
 
   toggles = [
-    { name: 'table 1', state: false },
-    { name: 'table 2', state: false },
-    { name: 'table 3', state: false },
-    { name: 'table 4', state: false },
-    { name: 'table 5', state: false },
-    { name: 'table 6', state: false }
+    { name: 'table 1', state: false, overlay: false },
+    { name: 'table 2', state: false, overlay: false },
+    { name: 'table 3', state: false, overlay: false  },
+    { name: 'table 4', state: false, overlay: false  },
+    { name: 'table 5', state: false, overlay: false  },
+    { name: 'table 6', state: false, overlay: false  }
   ];
 
   toggleDropdown(index: number) {
     this.toggles[index].state = !this.toggles[index].state;
-  
+    this.toggles[index].overlay = !this.toggles[index].overlay;
   }
 
   
