@@ -1,0 +1,205 @@
+.performance-matrix-tabs .nav-item {
+    width: 50%;
+}
+
+.tabs-mtd-ytd-monthly {
+    padding: 20px 32px 10px 32px;
+}
+
+.monthly-select{
+    left: 35px;
+}
+
+.tabs-mtd-ytd-monthly-content {
+    margin-top: 10px;
+}
+
+.tab-per-rolling-data {
+    padding: 5px 12px 10px 12px;
+}
+
+.tooltip-btn {
+    right: 15px;
+    top: 15px;
+}
+
+.arrow-up .policy-icons{
+    transform: rotate(180deg);
+}
+
+.sfb-details{
+    font-family: Exo;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 31.9px;
+    text-align: left;
+    color: #001F33;
+    padding-left: 35px;
+    position: relative;
+    top: 5px;
+}
+
+.wpc-img img{
+    width: 20px;
+}
+
+.new-search-filter {
+    padding: 20px 32px 20px 32px;
+}
+
+.table-p2 {
+    padding: 10px 32px;
+}
+
+.monthly-select-too{
+    width: 265px;
+    margin: 20px 0;
+}
+
+.monthly-select-too .select-button {
+    width: 262px;
+}
+
+.tooltip-btn {
+    right: 18px;
+    top: 25px;
+}
+
+.tooltip-btn img {
+    width: 25px;
+    height: 25px;
+}
+
+@media screen and (max-width: 1400px) {
+    .tabs-mtd-ytd-monthly {
+        padding: 20px 10px 10px 18px;
+    }
+
+    .wpc-info-number p img {
+        margin-right: 5px;
+    }
+
+    .tooltip-btn {
+        right: 10px;
+        top: 15px;
+    }
+
+    .sfb-details{
+        padding-left: 25px;
+    }
+
+    .tooltip-btn {
+        right: 18px;
+        top: 25px;
+    }
+
+    .Goalsheet_details_Card .value {
+        font-size: 22px;
+    }
+
+    .business-shot-table-data table tr th {
+        font-size: 12px;
+        padding: 18px 14px;
+    }
+
+    .business-shot-table-data {
+        padding: 30px 20px;
+    }
+
+    .new-search-filter {
+        padding: 30px 20px 20px 20px;
+    }
+    
+    .table-p2 {
+        padding: 10px 20px;
+    }
+
+    .monthly-select{
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .tabs-mtd-ytd-monthly {
+        padding: 15px 0px 5px 0px;
+    }
+    .monthly-select{
+        top: 0px;
+        right: -12px;
+    }
+
+    .white-main-content {
+        padding: 10px 15px;
+        padding-bottom: 100px !important;
+    }
+
+    .rolling-tabs-inner-content {
+        padding: 20px 0px;
+    }
+
+    .sfb-details{
+        padding-left: 5px;
+    }
+
+    .earning-block h4 {
+        font-size: 14px;
+    }
+    
+    .tabs-mtd-ytd-monthly .nav {
+        margin-right: 0;
+    }
+
+    .tabs-mtd-ytd-monthly .nav .nav-link {
+        padding: 10px 15px !important;
+    }
+
+    .insentive_valuesBlock{
+        border-radius: 20px;
+        padding: 0;
+    }
+
+    .insentive_values h4 {
+        padding-left: 0px;
+    }
+
+    .insentive_values {
+        border-radius: 0px;
+    }
+
+    .business-shot-table-data {
+        padding: 20px 0px;
+    }
+
+    .mobile-bg-ins-color{
+        padding-top: 20px;
+        background: linear-gradient(0deg, rgb(118 188 233 / 0%), rgb(185 195 202 / 0%)), 
+        linear-gradient(180deg, #6daee629 0%, rgb(188 196 202 / 0%) 100%);
+    }
+
+    .mobile-row-none{
+        padding-top: 0;
+        background: none;
+    }
+
+    .new-search-filter {
+        padding: 20px 0px 20px 0px;
+    }
+    
+    .table-p2 {
+        padding: 10px 0px;
+    }
+
+    .monthly-select{
+        left: 0px;
+    }
+
+    .tooltip-btn img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tooltip-btn {
+        right: 10px;
+        top: 15px;
+    }
+}

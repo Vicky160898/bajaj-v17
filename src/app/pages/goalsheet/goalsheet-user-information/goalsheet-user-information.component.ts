@@ -4,11 +4,11 @@ import { isPlatformBrowser } from '@angular/common';
 declare var bootstrap: any;
 
 @Component({
-  selector: 'app-goalsheet',
-  templateUrl: './goalsheet.component.html',
-  styleUrl: './goalsheet.component.css'
+  selector: 'app-goalsheet-user-information',
+  templateUrl: './goalsheet-user-information.component.html',
+  styleUrl: './goalsheet-user-information.component.css'
 })
-export class GoalsheetComponent {
+export class GoalsheetUserInformationComponent {
   isUserVisible: boolean = false;
   isMobile: boolean = false;
   isNavbar: boolean = false;
