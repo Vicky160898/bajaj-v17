@@ -3,19 +3,21 @@
 
     <div class="main-right-content">
 
+        <div *ngFor="let toggle of toggles; let i = index" 
+            [ngClass]="{'state': toggle.state, 'overlay': toggle.overlay}" 
+            (click)="toggleDropdown(i)">
+        </div>
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header-shot">
-
                         <div class="row">
-
-                            <div class="col-6">
+                            <div class="col-xl-6 col-md-5 col-6">
                                 <h1 class="heading1">Goalsheet</h1>
                                 <span class="last-date">last updated: 07/10/23</span>
                             </div>
-
-                            <div class="col-6">
+                            <div class="col-xl-6 col-md-7 col-6">
                                 <div class="data-chart-tabs">
                                     <div class="user-info-dropdown">
                                         <!-- <img src="../../../assets/images/notification.svg" alt=""> -->
@@ -37,13 +39,114 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-12">
+                                <div class="business-dprt-filter" [ngClass]="{'': !isNavbar, 'business-dprt-filter-mobile':isNavbar}">
+                                    <div class="click-view-filter">
+                                        <h3>Filters</h3>
+                                        <a class="filter-close" (click)="toggleShowDropDown()" ><img
+                                                src="../../../assets/images/filter-close.png" alt=""></a>
+                                    </div>
+                                    
+                                    <div class="custom-select">
+                                        <button class="select-button" (click)="toggleDropdown(0)"
+                                            [ngClass]="{'arrow-up': toggles[0].state}"
+                                            aria-labelledby="select button"
+                                            aria-haspopup="listbox" aria-expanded="false"
+                                            aria-controls="select-dropdown">
+                                            <span class="selected-value">Department</span>
+                                            <span class="dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="select-dropdown" *ngIf="toggles[0].state===true">
+                                            <li role="option">
+                                                <input type="radio" id="department-one" name="" />
+                                                <label for="department-one">Department 1</label>
+                                            </li>
+                                            <li role="option">
+                                                <input type="radio" id="department-two" name="" />
+                                                <label for="department-two">Department 2</label>
+                                            </li>
+                                            <li role="option">
+                                                <input type="radio" id="department-three" name="" />
+                                                <label for="department-three">Department 3</label>
+                                            </li>
+                                        </ul>
+                                    </div>
 
+                                    <div class="custom-select" >
+                                        <button class="select-button"  (click)="toggleDropdown(1)"
+                                            [ngClass]="{'arrow-up': toggles[1].state}"
+                                            aria-labelledby="select button"
+                                            aria-haspopup="listbox" aria-expanded="false"
+                                            aria-controls="select-dropdown">
+                                            <span class="selected-value">Sub Department</span>
+                                            <span class="dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="select-dropdown" *ngIf="toggles[1].state===true">
+                                            <li role="option">
+                                                <input type="radio" id="sub-department-one" name="" />
+                                                <label for="sub-department-one">Sub Department 1</label>
+                                            </li>
+                                            <li role="option">
+                                                <input type="radio" id="sub-department-two" name="" />
+                                                <label for="sub-department-two">Sub Department 2</label>
+                                            </li>
+                                            <li role="option">
+                                                <input type="radio" id="sub-department-three" name="" />
+                                                <label for="sub-department-three">Sub Department 3</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="custom-select">
+                                        <button class="select-button" (click)="toggleDropdown(2)"
+                                            [ngClass]="{'arrow-up': toggles[2].state}"
+                                            aria-labelledby="select button"
+                                            aria-haspopup="listbox" aria-expanded="false"
+                                            aria-controls="select-dropdown">
+                                            <span class="selected-value">Partners</span>
+                                            <span class="dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="select-dropdown" *ngIf="toggles[2].state===true">
+                                            <li role="option">
+                                                <input type="radio" id="partners-one" name="" />
+                                                <label for="partners-one">Partners 1</label>
+                                            </li>
+                                            <li role="option">
+                                                <input type="radio" id="partners-two" name="" />
+                                                <label for="partners-two">Partners 2</label>
+                                            </li>
+                                            <li role="option">
+                                                <input type="radio" id="partners-three" name="" />
+                                                <label for="partners-three">Partners 3</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <div class="mobile-filter-show" (click)="toggleShowDropDown()">
+            <img src="../../../assets/images/icons/mobile-filter-trns.svg" alt="">
+        </div>
+
+        <!-- mobile-user-details -->
+        <div class="mobile-user-details">
+            <h2><div class="user-name-only">Mr.Durgesh Rai</div> <span>(83336)</span></h2>
+            <h3><div class="user-name-only">Area Manager</div>. CABR</h3>
+        </div>
+
+        <!-- Middle Data -->
+
+        <div class="container-fluid white-main-content">
+           
+        </div>            
+
 
     </div>
 
 </div>
+

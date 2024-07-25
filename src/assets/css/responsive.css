@@ -118,7 +118,7 @@
     }
 
     .Goalsheet_details_wrapper {
-        margin: 30px 10px;
+        margin: 30px 20px;
     }
 
     .monthly-select-too {
@@ -358,7 +358,8 @@
     }
 
     .active-dropdown .selected-value{
-        color: #001f3376;
+        /* color: #001f3376; */
+        color: #001f33;
     }
 
     .active-dropdown .dropdown-arrow{
@@ -944,7 +945,7 @@
     }
 
     #clickshow-table::before {
-        right: 6px;
+        right: 4px;
     }
 
     .footer-business-shot {
@@ -1058,9 +1059,10 @@
     }
 
     .Goalsheet_details_Card {
-        min-height: 165px;
+        min-height: 159px;
         font-size: 12px;
         padding: 12px 15px;
+        border-radius: 20px;
     }
 
     .Goalsheet_handalingUser {
@@ -1071,14 +1073,19 @@
 
     .Goalsheet_details_wrapper {
         margin: 20px 0px;
+        border-radius: 20px;
     }
 
     .Goalsheet_details {
-        padding: 20px 16px;
+        padding: 10px 15px;
     }
 
     .Goalsheet_TimeDuration .time img {
         display: none;
+    }
+
+    .Goalsheet_TimeDuration {
+        border-radius: 20px 20px 0 0;
     }
 
     .Goalsheet_details_Card {
@@ -1140,6 +1147,11 @@
         width: 40px;
         height: 40px;
         background-size: 50%;
+    }
+
+    .Goalsheet_details_Card .value{
+        font-size: 18px;
+        padding-top: 10px;
     }
 
     .vertical-user-details {
@@ -1670,17 +1682,29 @@
     }
 
     .overlay{
-        position: unset;
+        /* position: unset;
         padding: unset;
-        background-color: unset;
+        background-color: unset; */
+    }
+
+    .Goalsheet_details_Card p {
+        font-size: 12px;
+    }
+
+    .data-tab-list-heading button img {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    .data-tab-list-heading button {
+        top: -4px !important;
+        right: -30px !important;
     }
 }
 
 @media screen and (max-width: 767px) {
     .Goalsheet_TimeDuration {
-        background: url(../images/WPC_bg.png) no-repeat 0 108%, #0077C5;
-        background-position-x: 104%;
-        padding: 20px 16px;
+        padding: 20px 10px;
     }
 
     .Goalsheet_TimeDuration .time span {
