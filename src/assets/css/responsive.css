@@ -718,7 +718,7 @@
         right: 15px;
         top: 40px;
         cursor: pointer;
-        z-index: 9;
+        /* z-index: 9; */
     }
 
     .business-dprt-filter-mobile .select-dropdown{
@@ -1667,6 +1667,12 @@
 
     .mobile-user-details{
         display: flex;
+    }
+
+    .overlay{
+        position: unset;
+        padding: unset;
+        background-color: unset;
     }
 }
 

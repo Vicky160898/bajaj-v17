@@ -45,17 +45,25 @@ export class AxisBankComponent {
 
   ngOnInit(): void {  }
 
+  ngAfterViewInit() {
+    // Button Dropdown Toggel
+    if (this.toggles[0].overlay === true) {
+      this.toggles[0].overlay = false;
+    }
+  }
+
   toggles = [
-    { name: 'table 1', state: false },
-    { name: 'table 2', state: false },
-    { name: 'table 3', state: false },
-    { name: 'table 4', state: false },
-    { name: 'table 5', state: false },
-    { name: 'table 6', state: false }
+    { name: 'table 1', state: false, overlay: false },
+    { name: 'table 2', state: false, overlay: false },
+    { name: 'table 3', state: false, overlay: false  },
+    { name: 'table 4', state: false, overlay: false  },
+    { name: 'table 5', state: false, overlay: false  },
+    { name: 'table 6', state: false, overlay: false  }
   ];
 
   toggleDropdown(index: number) {
     this.toggles[index].state = !this.toggles[index].state;
-  
+    this.toggles[index].overlay = !this.toggles[index].overlay;
   }
+
 }

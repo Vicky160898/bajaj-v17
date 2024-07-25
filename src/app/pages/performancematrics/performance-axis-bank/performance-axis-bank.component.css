@@ -14,14 +14,14 @@
     padding: 5px 12px 10px 12px;
 }
 
-tbody th span {
+.sec-blk {
     display: block;
     font-size: 12px;
     padding-top: 3px;
     color: #afafaf;
 }
 
-tbody td span {
+.sec-blk {
     display: block;
     font-size: 12px;
     padding-top: 3px;

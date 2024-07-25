@@ -25,32 +25,32 @@ export class IncentiveUserInformationComponent {
     }
   
   // Button Dropdown Toggel
-    toggles = [
-      { name: 'table 1', state: false },
-      { name: 'table 2', state: false },
-      { name: 'table 3', state: false },
-      { name: 'table 4', state: false },
-      { name: 'table 5', state: false },
-      { name: 'table 6', state: false },
-      { name: 'table 7', state: false },
-      { name: 'table 8', state: false },
-      { name: 'table 9', state: false },
-      { name: 'table 10', state: false },
-      { name: 'table 11', state: false },
-      { name: 'table 12', state: false },
-      { name: 'table 13', state: false },
-      { name: 'table 14', state: false },
-      { name: 'table 15', state: false },
-      { name: 'table 16', state: false },
-      { name: 'table 17', state: false },
-      { name: 'table 18', state: false },
-      { name: 'table 19', state: false },
-      { name: 'table 20', state: false },
-    ];
+  toggles = [
+    { name: 'table 1', state: false, overlay: false },
+    { name: 'table 2', state: false, overlay: false },
+    { name: 'table 3', state: false, overlay: false },
+    { name: 'table 4', state: false, overlay: false },
+    { name: 'table 5', state: false, overlay: false },
+    { name: 'table 6', state: false, overlay: false },
+    { name: 'table 7', state: false, overlay: false },
+    { name: 'table 8', state: false, overlay: false },
+    { name: 'table 9', state: false, overlay: false },
+    { name: 'table 10', state: false, overlay: false },
+    { name: 'table 11', state: false, overlay: false },
+    { name: 'table 12', state: false, overlay: false },
+    { name: 'table 13', state: false, overlay: false },
+    { name: 'table 14', state: false, overlay: false },
+    { name: 'table 15', state: false, overlay: false },
+    { name: 'table 16', state: false, overlay: false },
+    { name: 'table 17', state: false, overlay: false },
+    { name: 'table 18', state: false, overlay: false },
+    { name: 'table 19', state: false, overlay: false },
+    { name: 'table 20', state: false, overlay: false },
+  ];
   
     toggleDropdown(index: number) {
       this.toggles[index].state = !this.toggles[index].state;
-    
+      this.toggles[index].overlay = !this.toggles[index].overlay;
     }
   // Button Dropdown Toggel
   
@@ -73,6 +73,17 @@ export class IncentiveUserInformationComponent {
         new bootstrap.Tooltip(tooltipTriggerEl);
       });
     }
+    
+    // Button Dropdown Toggel
+    if (this.toggles[0].overlay === true) {
+      this.toggles[0].overlay = false;
+    }
+
+    // Search Filter
+    if (this.togglesSearch[0].overlay === true) {
+      this.togglesSearch[0].overlay = false;
+    }
+    
   }
   // boostrap tooltip
   
@@ -110,23 +121,24 @@ export class IncentiveUserInformationComponent {
   
   //New Search Filter
   togglesSearch = [
-    { name: 'table 1', state: false },
-    { name: 'table 2', state: false },
-    { name: 'table 3', state: false },
-    { name: 'table 4', state: false },
-    { name: 'table 5', state: false },
-    { name: 'table 6', state: false },
-    { name: 'table 7', state: false },
-    { name: 'table 8', state: false },
-    { name: 'table 9', state: false },
-    { name: 'table 10', state: false },
+    { name: 'table 1', state: false, overlay: false },
+    { name: 'table 2', state: false, overlay: false },
+    { name: 'table 3', state: false, overlay: false  },
+    { name: 'table 4', state: false, overlay: false  },
+    { name: 'table 5', state: false, overlay: false  },
+    { name: 'table 6', state: false, overlay: false  },
+    { name: 'table 7', state: false, overlay: false  },
+    { name: 'table 8', state: false, overlay: false  },
+    { name: 'table 9', state: false, overlay: false  },
+    { name: 'table 10', state: false, overlay: false  },
   ];
-  
+
   togglesSearchFilter(index: number) {
     this.togglesSearch[index].state = !this.togglesSearch[index].state;
+    this.togglesSearch[index].overlay = !this.togglesSearch[index].overlay;
   }
   // New Search Filter
-  
+    
   
   }
   
