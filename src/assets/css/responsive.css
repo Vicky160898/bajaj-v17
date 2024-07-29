@@ -792,7 +792,7 @@
         border-radius: 24px 24px 0 0;
         padding: 17px 15px;
         border-bottom: transparent;
-        margin-top: 60px;
+        margin-top: 80px;
     }
 
     .tabs-mtd-ytd-monthly .nav .nav-link {
@@ -1678,7 +1678,7 @@
     }
 
     .mobile-user-details{
-        display: flex;
+        display: block;
     }
 
     .overlay{

@@ -3353,7 +3353,7 @@ main {
 .mobile-user-details{
     display: none;
     background-color: #001F33;
-    padding: 14px 15px 30px 15px;
+    padding: 11px 15px 30px 15px;
     align-items: flex-start;
     justify-content: space-between;
     position: absolute;
@@ -3365,12 +3365,15 @@ main {
 
 .mobile-user-details h2{
     font-family: Exo;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     line-height: 18.61px;
     text-align: left;
-    color: #ffffff;  
-    display: flex;  
+    color: #ffffff;
+    display: flex;
+    border-bottom: 1px solid #6a6a6a;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .user-name-only{
@@ -3388,12 +3391,13 @@ main {
 
 .mobile-user-details h3{
     font-family: Exo;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 18.61px;
     text-align: right;
-    color: #ffffff;   
+    color: #8a8a8a;   
     display: flex; 
+    justify-content: space-between;
 }
 
 .arrow-up .dropdown-arrow{
