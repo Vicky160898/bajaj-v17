@@ -27,6 +27,7 @@ import { UserInformationComponent } from './pages/performancematrics/user-inform
 import { PerformanceAxisBankComponent } from './pages/performancematrics/performance-axis-bank/performance-axis-bank.component';
 import { IncentiveUserInformationComponent } from './pages/incentive/incentive-user-information/incentive-user-information.component';
 import { GoalsheetUserInformationComponent } from './pages/goalsheet/goalsheet-user-information/goalsheet-user-information.component';
+import { SmpUserInformationComponent } from './pages/smp/smp-user-information/smp-user-information.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { GoalsheetUserInformationComponent } from './pages/goalsheet/goalsheet-u
     PerformanceAxisBankComponent,
     IncentiveUserInformationComponent,
     GoalsheetUserInformationComponent,
+    SmpUserInformationComponent,
 
   ],
   imports: [

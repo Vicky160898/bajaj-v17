@@ -16,6 +16,7 @@ import { UserInformationComponent } from './pages/performancematrics/user-inform
 import { PerformanceAxisBankComponent } from './pages/performancematrics/performance-axis-bank/performance-axis-bank.component';
 import { IncentiveUserInformationComponent } from './pages/incentive/incentive-user-information/incentive-user-information.component';
 import { GoalsheetUserInformationComponent } from './pages/goalsheet/goalsheet-user-information/goalsheet-user-information.component';
+import { SmpUserInformationComponent } from './pages/smp/smp-user-information/smp-user-information.component';
 
 const routes: Routes = [
   { path: "business", component: BusinessComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: "performance-axis-bank", component: PerformanceAxisBankComponent },
   { path: "incentive-user-information", component: IncentiveUserInformationComponent },
   { path: "goalsheet-user-information", component: GoalsheetUserInformationComponent },
+  { path: "smp-user-information", component: SmpUserInformationComponent },
   { path: "**", redirectTo: "/" },
 ];
 
