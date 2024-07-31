@@ -1,3 +1,5 @@
+/* tarique */
+
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800&display=swap');
 
 * {
@@ -2014,16 +2016,19 @@ main {
 
 .smp-report-dw {
     position: relative;
-    right: -40px;
+    right: -35px;
     top: 0;
-    margin: 30px 15px 30px 0px;
+    margin: 20px 15px 30px 0px;
 }
 
 .smp-compliant {
-    padding: 32px;
-    border-radius: 32px;
-    margin: 0 30px 40px 30px;
+    padding: 20px;
+    border-radius: 24px;
+    margin: 0 35px 40px 35px;
     background-color: #005DAC;
+    background-image: url(../images/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .smp-compliant .issuance_WPC_targeted_data {
@@ -2038,6 +2043,30 @@ main {
 
 .issuance_WPC_targeted_data .icon.smpbda {
     background: url(../images/icons/smpbda.png) no-repeat center center;
+}
+
+.issuance_WPC_targeted_data .icon.self-smp{
+    background: url(../images/icons/self-smp.png) no-repeat center center;
+}
+
+.issuance_WPC_targeted_data .icon.bda-smp{
+    background: url(../images/icons/bda-smp.png) no-repeat center center;
+}
+
+.issuance_WPC_targeted_data .icon.team-smp{
+    background: url(../images/icons/team-smp.png) no-repeat center center;
+}
+
+.issuance_WPC_targeted_data .icon.team-bda{
+    background: url(../images/icons/team-bda.png) no-repeat center center;
+}
+
+.issuance_WPC_targeted_data .icon.mtd-acv{
+    background: url(../images/icons/mtd-acv.png) no-repeat center center;
+}
+
+.issuance_WPC_targeted_data .icon.ytd-acv{
+    background: url(../images/icons/ytd-acv.png) no-repeat center center;
 }
 
 .morning-huddle {
@@ -2056,10 +2085,10 @@ main {
 .comp-box {
     background-color: #F3F9FC;
     margin-bottom: 15px;
-    padding: 18px;
+    padding: 15px;
     border-radius: 15px;
     border: 1px solid #e7e7e7;
-    height: 106px;
+    min-height: 90px;
 }
 
 .comp-box h2 {
@@ -2396,19 +2425,19 @@ main {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 15px;
+    bottom: 25px;
 }
 
 .compliance-details span{
     color: #001F33;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     padding-bottom: 5px;
 }
 
 .compliance-details h2{
     color: #7e8d98;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     padding-bottom: 2px;
     padding-top: 5px;

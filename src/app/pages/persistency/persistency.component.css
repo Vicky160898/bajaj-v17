@@ -1,0 +1,44 @@
+.tabs-mtd-ytd-monthly {
+    padding: 20px 32px 10px 32px;
+}
+
+.monthly-select{
+    top: 90px; 
+}
+
+.tabs-mtd-ytd-monthly-content {
+    margin-top: 10px;
+}
+
+.tab-per-rolling-data {
+    padding: 5px 12px 10px 12px;
+}
+
+@media screen and (max-width: 1400px) {
+    .tabs-mtd-ytd-monthly {
+        padding: 20px 12px 10px 18px;
+    }
+
+    .wpc-info-number p img {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .tabs-mtd-ytd-monthly {
+        padding: 15px 0px 5px 0px;
+    }
+    .monthly-select{
+        top: 0px;
+        right: -12px;
+    }
+
+    .white-main-content {
+        padding: 10px 15px;
+    }
+
+    .rolling-tabs-inner-content {
+        padding: 20px 0px;
+    }
+
+}

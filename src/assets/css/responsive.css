@@ -1,3 +1,5 @@
+/* tarique */
+
 @media screen and (max-width: 1400px) {
     .graph-tabs-issuance .nav .nav-link {
         font-size: 14px;
@@ -146,7 +148,7 @@
     }
 
     .smp-compliant {
-        margin: 0 10px 30px 10px;
+        margin: 0 20px 30px 20px;
     }
 
     .smp-compliant .issuance_WPC_targeted_data {
@@ -1381,7 +1383,7 @@
     .smp-report-dw {
         width: 160px;
         right: -10px;
-        margin-top: 5px;
+        margin-top: 15px;
     }
 
     .smp-report-dw .select-button {
@@ -1538,7 +1540,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 0px;
+        /* bottom: 0px; */
     }
 
     .compliance-details span {
@@ -1700,6 +1702,7 @@
         top: -4px !important;
         right: -30px !important;
     }
+    
 }
 
 @media screen and (max-width: 767px) {
