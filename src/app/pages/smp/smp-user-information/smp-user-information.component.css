@@ -1,0 +1,273 @@
+/* tarique */
+
+.tabs-mtd-ytd-monthly {
+    padding: 20px 32px 10px 32px;
+}
+
+.tabs-mtd-ytd-monthly-content {
+    margin-top: 10px;
+}
+
+.tab-per-rolling-data {
+    padding: 5px 12px 10px 12px;
+}
+
+.issuance_WPC_targeted_data{
+    border-radius: 24px;
+}
+
+.wpc-info-number {
+    color: #fff;
+    margin: 0 35px 30px 35px;
+}
+
+.month-right-side{
+    right: 35px;
+    top: 85px;
+    width: 175px;
+}
+
+.button-flex-wrp{
+    display: flex;
+}
+
+.table-tooltip {
+    right: 0px !important;
+    top: 5px !important;
+}
+
+.smp-compliant .issuance_WPC_targeted_data {
+    padding: 18px 22px;
+    margin: 15px 0;
+}
+
+.smp-compliant {
+    padding: 15px 20px;
+}
+
+.data-chart-tabs .nav{
+    position: absolute;
+    top: -83px;
+    right: 20px;
+}
+
+.new-search-filter {
+    padding: 20px 32px 20px 32px;
+}
+
+.table-p2 {
+    padding: 10px 32px;
+}
+
+.pro-rata span{
+    color: #929fa8;
+    font-size: 12px;
+    font-weight: 600;
+    padding-bottom: 6px;
+    display: block;
+    position: relative;
+}
+
+.pro-rata p{
+    padding-bottom: 15px;
+}
+
+.pro-rata span::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -12px;
+    background: #005DAC;
+    width: 3.5px;
+    height: 13px;
+    border-radius: 100px;
+}
+
+.pro-rata .mtarget:before{
+    background-color: rgb(204, 204, 204);
+}
+
+.pro-rata{
+    margin-top: 20px;
+}
+
+.png-comp img{
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    position: relative;
+    top: -10px;
+}
+
+.compliance-data-bg{
+    background-color: #F3F9FC;
+}
+
+.png-comp {
+    position: relative;
+    display: flex;
+    max-width: 195px;
+    align-items: center;
+    height: 100%;
+}
+
+.progress-tooltip{
+    top: 15px !important;
+    right: 15px !important;
+}
+
+.head-icon-text {
+    font-size: 15px !important;
+}
+
+.tooltip-btn{
+    top: 25px;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .tabs-mtd-ytd-monthly {
+        padding: 20px 12px 10px 18px;
+    }
+
+    .wpc-info-number p img {
+        margin-right: 5px;
+    }
+
+    .png-comp{
+        top: -10px;
+    }
+
+    .wpc-info-number {
+        color: #fff;
+        margin: 0 20px 30px 20px;
+    }
+
+    .month-right-side{
+        right:20px;
+        top: 85px;
+    }
+
+    .business-shot-table-data {
+        padding: 30px 20px;
+    }
+
+    .table-p2 {
+        padding: 10px 20px;
+    }
+
+    .data-chart-tabs .nav{
+        right: 10px;
+    }
+    .new-search-filter {
+        padding: 30px 20px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .tabs-mtd-ytd-monthly {
+        padding: 15px 0px 5px 0px;
+    }
+    .monthly-select{
+        top: 0px;
+        right: 0px;
+    }
+
+    .white-main-content {
+        padding: 10px 15px;
+    }
+
+    .rolling-tabs-inner-content {
+        padding: 20px 0px;
+    }
+
+    .wpc-info-number {
+        color: #fff;
+        margin: 0 0px 20px 0px;
+    }
+
+    .month-right-side{
+        position: relative;
+        top: 0px !important;
+        height: 45px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .new-search-filter {
+        padding: 20px 0px 20px 0px;
+    }
+
+    .mobile-bg-ins-color{
+        padding-top: 20px;
+        background: linear-gradient(0deg, rgb(118 188 233 / 0%), rgb(185 195 202 / 0%)), 
+        linear-gradient(180deg, #6daee629 0%, rgb(188 196 202 / 0%) 100%);
+    }
+
+    .mobile-row-none{
+        padding-top: 0;
+        background: none;
+    }
+
+    .table-tooltip {
+        right: 0px !important;
+        top: 0px !important;
+    }
+
+    .smp-compliant .issuance_WPC_targeted_data {
+        padding: 15px;
+        margin: 10px 0;
+        min-height: 170px;
+    }
+
+    .smp-compliant {
+        padding: 10px 18px;
+    }
+
+    .business-shot-table-data {
+        padding: 30px 0px;
+    }
+
+    .table-p2 {
+        padding: 10px 0px;
+    }
+
+    .team-heading-number {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .data-chart-tabs .nav{
+        right: 41px;
+        top: -125px;
+    }
+
+    .pro-rata span{
+        font-size: 12px;
+    }
+
+    .png-comp img{
+        width: 135px;
+        height: 135px;
+    }
+
+    .progress-tooltip{
+        top: 15px !important;
+        right: 15px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .button-flex-wrp{
+        flex-wrap: wrap;
+    }
+    
+    .smp-report-dw{
+        margin: 15px 10px 0px 0px;
+        height: 45px;
+    }
+
+    .month-right-side{
+        /* top: -8px !important; */
+        /* height: 42px; */
+    }
+}

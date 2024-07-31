@@ -1,0 +1,1447 @@
+<div>
+    <app-dashboard></app-dashboard>
+
+    <div class="main-right-content" >
+
+        <div *ngFor="let toggle of toggles; let i = index" 
+            [ngClass]="{'state': toggle.state, 'overlay': toggle.overlay}" 
+            (click)="toggleDropdown(i)">
+        </div>
+
+        <div *ngFor="let toggle of togglesSearch; let i = index" 
+            [ngClass]="{'state': toggle.state, 'overlay': toggle.overlay}" 
+            (click)="togglesSearchFilter(i)">
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-shot">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-12">
+                                <div class="user-info-back">
+                                    <div class="back-icon-left" [routerLink]="['/smp-report']">
+                                        <img src="../../../assets/images/icons/back.png" alt="back">
+                                    </div>
+                                    <div>
+                                        <h1 class="heading1">Mrs. Saroj Kumar Tripathi</h1>
+                                        <span class="last-date d-flex">RM - 255620 <div class="user-info-active">Active</div></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile-user-details -->
+        <div class="mobile-user-details">
+            <h2>Mr.Durgesh Rai (AM-83336)</h2>
+            <h3><div class="user-name-only">Area Manager</div><span>. CABR</span></h3>
+        </div>
+
+
+        <!-- Middle Data -->
+
+        <div class="container-fluid white-main-content">
+            <div class="row">
+                <div class="col-lg-12">
+        
+                    <div class="mtd-ytd-monthly">
+                        <div class="row">
+        
+                            <div class="col-lg-12 padding0">
+
+                                <div class="performance-matrix-tabs">
+                                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <button class="nav-link active" id="pills-self-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-self" role="tab" aria-controls="pills-self"
+                                                aria-selected="true"><img src="../../../assets/images/icons/self.png" alt=""> Self</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link"  id="pills-team-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-team" role="tab" aria-controls="pills-team"
+                                                aria-selected="false"><img src="../../../assets/images/icons/team.png" alt=""> Team</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link" id="pills-comparison-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-comparison" role="tab"aria-controls="pills-comparison" 
+                                                aria-selected="false"> <img src="../../../assets/images/icons/comparison.png" alt=""> Comparison</button>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="tab-content performance-matrix-content" id="pills-tabContent">
+
+                                    <!-- Self -->
+                                    <div class="tab-pane fade show active" id="pills-self" role="tabpanel" aria-labelledby="pills-self-tab">
+
+                                        <!-- inner-data-graph-tabs -->
+                                        <div class="data-chart-tabs ">
+                                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="pills-data-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-data" type="button" role="tab"
+                                                        aria-controls="pills-data" aria-selected="true"><img
+                                                            src="../../../assets/images/tab-data-icon.svg" alt="">Data</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-graph-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-graph" type="button" role="tab"
+                                                        aria-controls="pills-graph" aria-selected="false"><img
+                                                            src="../../../assets/images/tab-chart-iccon.svg"
+                                                            alt="">Graph</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- inner-data-graph-tabs -->
+                                        
+                                        <!-- data and graph bottom-content -->
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="pills-data" role="tabpanel" aria-labelledby="pills-data-tab">
+
+                                                <!-- Slect Month and Year -->
+                                                <div class="col-lg-12 button-flex-wrp">
+                                                    <div class="monthly-select smp-report-dw">
+                                                        <div class="custom-select">
+                                                            <button class="select-button" (click)="toggleDropdown(3)"
+                                                                [ngClass]="{'arrow-up': toggles[3].state}"
+                                                                aria-labelledby="select button"
+                                                                aria-haspopup="listbox" aria-expanded="false"
+                                                                aria-controls="select-dropdown">
+                                                                <span>Month:</span>
+                                                                <span class="selected-value">Select</span>
+                                                                <span class="dropdown-arrow"></span>
+                                                            </button>
+                                                            <ul class="select-dropdown" *ngIf="toggles[3].state===true">
+                                                                <li>
+                                                                    <input type="radio" id="January" name="" />
+                                                                    <label for="January">January</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="February" name="" />
+                                                                    <label for="February">February</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="March" name="" />
+                                                                    <label for="March">March</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="April" name="" />
+                                                                    <label for="April">April</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="May" name="" />
+                                                                    <label for="May">May</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="June" name="" />
+                                                                    <label for="June">June</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="July" name="" />
+                                                                    <label for="July">July</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="August" name="" />
+                                                                    <label for="August">August</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="September" name="" />
+                                                                    <label for="September">September</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="October" name="" />
+                                                                    <label for="October">October</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="November" name="" />
+                                                                    <label for="November">November</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="December" name="" />
+                                                                    <label for="December">December</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="monthly-select smp-report-dw">
+                                                        <div class="custom-select">
+                                                            <button class="select-button" (click)="toggleDropdown(4)"
+                                                                [ngClass]="{'arrow-up': toggles[4].state}"
+                                                                aria-labelledby="select button"
+                                                                aria-haspopup="listbox" aria-expanded="false"
+                                                                aria-controls="select-dropdown">
+                                                                <span>Year:</span>
+                                                                <span class="selected-value">Select</span>
+                                                                <span class="dropdown-arrow"></span>
+                                                            </button>
+                                                            <ul class="select-dropdown" *ngIf="toggles[4].state===true">
+                                                                <li>
+                                                                    <input type="radio" id="2024" name="" />
+                                                                    <label for="2024">2024</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="2023" name="" />
+                                                                    <label for="2023">2023</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="2022" name="" />
+                                                                    <label for="2022">2022</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="2021" name="" />
+                                                                    <label for="2021">2021</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="monthly-select year-select-too month-right-side">
+                                                        <div class="custom-select">
+                                                            <button class="select-button" (click)="toggleDropdown(5)"
+                                                                [ngClass]="{'arrow-up': toggles[5].state}"
+                                                                aria-labelledby="select button"
+                                                                aria-haspopup="listbox" aria-expanded="false"
+                                                                aria-controls="select-dropdown">
+                                                                <span><img src="../../../assets/images/icons/downlode-ic.png" alt=""></span>
+                                                                <span class="selected-value">Download</span>
+                                                                <span class="dropdown-arrow"></span>
+                                                            </button>
+                                                            <ul class="select-dropdown" *ngIf="toggles[5].state===true">
+                                                                <li>
+                                                                    <label for="2024">Consolidate Data</label>
+                                                                </li>
+                                                                <li>
+                                                                    <label for="2023">DSR/SMP Activity Data</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <div class="wpc-info-number"><p><img src="../../../assets/images/icons/wpc-Info.svg" alt=""> <strong> Earn additional Rs 5000</strong> on completion of 20 lead generation & 40 customer meeting</p></div>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <div class="smp-compliant">
+                                                        <div class="row">
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon self-smp"></div>
+                                                                    <p>Self SMP Compliant</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button>  
+                                                                    <div class="value">
+                                                                        100Y
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon bda-smp"></div>
+                                                                    <p>Self SMP BDA</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button> 
+                                                                    <div class="value">
+                                                                        5000
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon team-smp"></div>
+                                                                    <p>Team SMP Compliant</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button> 
+                                                                    <div class="value">
+                                                                        60Y
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon team-bda"></div>
+                                                                    <p>Team SMP BDA</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button> 
+                                                                    <div class="value">
+                                                                        12
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon mtd-acv"></div>
+                                                                    <p>MTD Achievement%</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button> 
+                                                                    <div class="value">
+                                                                        98%
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon ytd-acv"></div>
+                                                                    <p>YTD Achievement%</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button> 
+                                                                    <div class="value">
+                                                                        78%
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="business-shot-table-data mobile-row-none">
+                                                    <div class="row mobile-bg-ins-color">
+                                                        <!-- Box One -->
+                                                        <div class="col-xxl-4 col-lg-4 col-md-6">
+                                                            <div class="morning-huddle">
+                                                                <div class="head-icon-text ">
+                                                                    <img src="../../../assets/images/icons/connection.png" alt="">
+                                                                    Branch Morning Huddle
+                                                                    <!-- tooltip -->
+                                                                    <button type="button" class="tooltip-btn table-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                    </button>
+                                                                    <!-- tooltip -->  
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Compliance%</h2>
+                                                                            <span>112%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Compliant</h2>
+                                                                            <span>100Y</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Monthly Target</h2>
+                                                                            <span>20</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Pro-rata Target</h2>
+                                                                            <span>16</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>FTD SMP Compliance</h2>
+                                                                            <span>07</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>MTD SMP Compliance</h2>
+                                                                            <span>245</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+        
+                                                        <!-- Box Two -->
+                                                        <div class="col-xxl-4 col-lg-4 col-md-6">
+                                                            <div class="morning-huddle">
+                                                                <div class="head-icon-text ">
+                                                                    <img src="../../../assets/images/icons/handshake.png" alt="">
+                                                                    Goal Review Meeting
+                                                                    <!-- tooltip -->
+                                                                    <button type="button" class="tooltip-btn table-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                    </button>
+                                                                    <!-- tooltip -->  
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Compliance%</h2>
+                                                                            <span>112%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Compliant</h2>
+                                                                            <span>100Y</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Monthly Target</h2>
+                                                                            <span>20</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Pro-rata Target</h2>
+                                                                            <span>16</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>FTD SMP Compliance</h2>
+                                                                            <span>07</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>MTD SMP Compliance</h2>
+                                                                            <span>245</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+        
+                                                        <!-- Box Four -->
+                                                        <div class="col-xxl-4 col-lg-4 col-md-6">
+                                                            <div class="morning-huddle">
+                                                                <div class="head-icon-text ">
+                                                                    <img src="../../../assets/images/icons/phone-call.png" alt="">
+                                                                    Join Calls
+                                                                     <!-- tooltip -->
+                                                                     <button type="button" class="tooltip-btn table-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                    </button>
+                                                                    <!-- tooltip -->  
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Compliance%</h2>
+                                                                            <span>112%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Compliant</h2>
+                                                                            <span>100Y</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Monthly Target</h2>
+                                                                            <span>20</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Pro-rata Target</h2>
+                                                                            <span>16</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>FTD SMP Compliance</h2>
+                                                                            <span>07</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>MTD SMP Compliance</h2>
+                                                                            <span>245</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+        
+                                                        <!-- Box Three -->
+                                                        <div class="col-xxl-4 col-lg-4 col-md-6">
+                                                            <div class="morning-huddle">
+                                                                <div class="head-icon-text ">
+                                                                    <img src="../../../assets/images/icons/organisation.png" alt="">
+                                                                    Meeting with Branch Head
+                                                                     <!-- tooltip -->
+                                                                     <button type="button" class="tooltip-btn table-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                    </button>
+                                                                    <!-- tooltip -->  
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Compliance%</h2>
+                                                                            <span>112%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Compliant</h2>
+                                                                            <span>100Y</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Monthly Target</h2>
+                                                                            <span>20</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>Pro-rata Target</h2>
+                                                                            <span>16</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>FTD SMP Compliance</h2>
+                                                                            <span>07</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6">
+                                                                        <div class="comp-box">
+                                                                            <h2>MTD SMP Compliance</h2>
+                                                                            <span>245</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                
+                                            <div class="tab-pane fade" id="pills-graph" role="tabpanel" aria-labelledby="pills-graph-tab">
+                                                
+                                                <!-- Slect Month and Year -->
+                                                <div class="col-lg-12 button-flex-wrp">
+                                                    <div class="monthly-select smp-report-dw">
+                                                        <div class="custom-select">
+                                                            <button class="select-button" (click)="toggleDropdown(3)"
+                                                                [ngClass]="{'arrow-up': toggles[3].state}"
+                                                                aria-labelledby="select button"
+                                                                aria-haspopup="listbox" aria-expanded="false"
+                                                                aria-controls="select-dropdown">
+                                                                <span>Month:</span>
+                                                                <span class="selected-value">Select</span>
+                                                                <span class="dropdown-arrow"></span>
+                                                            </button>
+                                                            <ul class="select-dropdown" *ngIf="toggles[3].state===true">
+                                                                <li>
+                                                                    <input type="radio" id="January" name="" />
+                                                                    <label for="January">January</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="February" name="" />
+                                                                    <label for="February">February</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="March" name="" />
+                                                                    <label for="March">March</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="April" name="" />
+                                                                    <label for="April">April</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="May" name="" />
+                                                                    <label for="May">May</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="June" name="" />
+                                                                    <label for="June">June</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="July" name="" />
+                                                                    <label for="July">July</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="August" name="" />
+                                                                    <label for="August">August</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="September" name="" />
+                                                                    <label for="September">September</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="October" name="" />
+                                                                    <label for="October">October</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="November" name="" />
+                                                                    <label for="November">November</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="December" name="" />
+                                                                    <label for="December">December</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="monthly-select smp-report-dw">
+                                                        <div class="custom-select">
+                                                            <button class="select-button" (click)="toggleDropdown(4)"
+                                                                [ngClass]="{'arrow-up': toggles[4].state}"
+                                                                aria-labelledby="select button"
+                                                                aria-haspopup="listbox" aria-expanded="false"
+                                                                aria-controls="select-dropdown">
+                                                                <span>Year:</span>
+                                                                <span class="selected-value">Select</span>
+                                                                <span class="dropdown-arrow"></span>
+                                                            </button>
+                                                            <ul class="select-dropdown" *ngIf="toggles[4].state===true">
+                                                                <li>
+                                                                    <input type="radio" id="2024" name="" />
+                                                                    <label for="2024">2024</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="2023" name="" />
+                                                                    <label for="2023">2023</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="2022" name="" />
+                                                                    <label for="2022">2022</label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="2021" name="" />
+                                                                    <label for="2021">2021</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="monthly-select year-select-too month-right-side">
+                                                        <div class="custom-select">
+                                                            <button class="select-button" (click)="toggleDropdown(5)"
+                                                                [ngClass]="{'arrow-up': toggles[5].state}"
+                                                                aria-labelledby="select button"
+                                                                aria-haspopup="listbox" aria-expanded="false"
+                                                                aria-controls="select-dropdown">
+                                                                <span><img src="../../../assets/images/icons/downlode-ic.png" alt=""></span>
+                                                                <span class="selected-value">Download</span>
+                                                                <span class="dropdown-arrow"></span>
+                                                            </button>
+                                                            <ul class="select-dropdown" *ngIf="toggles[5].state===true">
+                                                                <li>
+                                                                    <label for="2024">Consolidate Data</label>
+                                                                </li>
+                                                                <li>
+                                                                    <label for="2023">DSR/SMP Activity Data</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <div class="wpc-info-number"><p><img src="../../../assets/images/icons/wpc-Info.svg" alt=""> <strong> Earn additional Rs 5000</strong> on completion of 20 lead generation & 40 customer meeting</p></div>
+                                                </div>
+
+                                                <div class="col-lg-12">
+                                                    <div class="smp-compliant">
+                                                        <div class="row">
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon self-smp"></div>
+                                                                    <p>Self SMP Compliant</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button> 
+                                                                    <div class="value">
+                                                                        100Y
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon bda-smp"></div>
+                                                                    <p>Self SMP BDA</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button> 
+                                                                    <div class="value">
+                                                                        5000
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon team-smp"></div>
+                                                                    <p>Team SMP Compliant</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button> 
+                                                                    <div class="value">
+                                                                        60Y
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon team-bda"></div>
+                                                                    <p>Team SMP BDA</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button> 
+                                                                    <div class="value">
+                                                                        12
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon mtd-acv"></div>
+                                                                    <p>MTD Achievement%</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button> 
+                                                                    <div class="value">
+                                                                        98%
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+                                                                <div class="issuance_WPC_targeted_data ">
+                                                                    <div class="icon ytd-acv"></div>
+                                                                    <p>YTD Achievement%</p>
+                                                                    <button class="tooltip-btn"  data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top" title="Lorem Ipsum Dammy Test">
+                                                                        <img src="../../../assets/images/icons/tooltip.svg"
+                                                                            class="fluid-img">
+                                                                    </button> 
+                                                                    <div class="value">
+                                                                        78%
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- graph-data will come here -->
+                                                <div class="business-shot-table-data mobile-row-none">
+                                                    <div class="row mobile-bg-ins-color">
+
+                                                        <!-- Box One -->
+                                                        <div class="col-xxl-4 col-lg-4 col-md-6">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="2" class="head-icon-text">
+                                                                                <img src="../../../assets/images/icons/connection.png"
+                                                                                alt=""> 
+                                                                                Branch Morning Huddle
+                                                                                <!-- tooltip -->
+                                                                                <button type="button" class="tooltip-btn table-tooltip progress-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                                    <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                                </button>
+                                                                                <!-- tooltip -->  
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th colspan="2"> 
+                                                                                <div class="compliance-graph">
+                                                                                    <div class="row">
+                                                                                        <div class="col-7">
+                                                                                            <div class="png-comp">
+                                                                                                                                                                        
+                                                                                                <round-progress
+                                                                                                    [current]="current"
+                                                                                                    [max]="max"
+                                                                                                    [color]="'#065ba4'"
+                                                                                                    [background]="'#eaeaea'"
+                                                                                                    [radius]="125"
+                                                                                                    [stroke]="18"
+                                                                                                    [semicircle]="true"
+                                                                                                    [responsive]="true"
+                                                                                                    [rounded]="true"
+                                                                                                    [clockwise]="true"
+                                                                                                />
+
+                                                                                                <div class="compliance-details">
+                                                                                                    <span>112%</span>
+                                                                                                    <h2>Compliance</h2>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-5">
+                                                                                            <div class="pro-rata">
+                                                                                                <span>Pro-Rata Target</span>
+                                                                                                <p>16</p>
+                                                                                                <span class="mtarget">Monthly Target</span>
+                                                                                                <p>20</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th class="compliance-data-bg">FTD SMP Compliance</th>
+                                                                            <td class="compliance-data-bg">07</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>MTD SMP Compliance</th>
+                                                                            <td>247</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th class="compliance-data-bg">Compliant</th>
+                                                                            <td class="compliance-data-bg">100Y</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Box Two -->
+                                                        <div class="col-xxl-4 col-lg-4 col-md-6">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="2" class="head-icon-text">
+                                                                                <img src="../../../assets/images/icons/handshake.png"
+                                                                                alt="">Goal Review Meeting
+                                                                                <!-- tooltip -->
+                                                                                <button type="button" class="tooltip-btn table-tooltip progress-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                                    <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                                </button>
+                                                                                <!-- tooltip -->  
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th colspan="2"> 
+                                                                                <div class="compliance-graph">
+                                                                                    <div class="row">
+                                                                                        <div class="col-7">
+                                                                                            <div class="png-comp">
+                                                                                                <!-- <img src="../../../assets/images/png-comp.png" alt=""> -->
+                                                                                                <round-progress
+                                                                                                [current]="current"
+                                                                                                [max]="max"
+                                                                                                [color]="'#065ba4'"
+                                                                                                [background]="'#eaeaea'"
+                                                                                                [radius]="125"
+                                                                                                [stroke]="18"
+                                                                                                [semicircle]="true"
+                                                                                                [rounded]="true"
+                                                                                                [clockwise]="true"
+                                                                                                [responsive]="true"
+                                                                                            
+                                                                                            />
+
+                                                                                            <div class="compliance-details">
+                                                                                                    <span>200%</span>
+                                                                                                    <h2>Compliance</h2>
+                                                                                                </div>
+                                                                                        
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-5">
+                                                                                            <div class="pro-rata">
+                                                                                                <span>Pro-rata Target</span>
+                                                                                                <p>16</p>
+                                                                                                <span class="mtarget">Monthly Target</span>
+                                                                                                <p>16</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th class="compliance-data-bg">FTD SMP Compliance</th>
+                                                                            <td class="compliance-data-bg">07</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>MTD SMP Compliance</th>
+                                                                            <td>247</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th class="compliance-data-bg">Compliant</th>
+                                                                            <td class="compliance-data-bg">100Y</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Box Three -->
+                                                        <div class="col-xxl-4 col-lg-4 col-md-6">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="2" class="head-icon-text">
+                                                                                <img src="../../../assets/images/icons/phone-call.png"
+                                                                                alt="">Join Calls
+                                                                                <!-- tooltip -->
+                                                                                <button type="button" class="tooltip-btn table-tooltip progress-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                                    <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                                </button>
+                                                                                <!-- tooltip -->  
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th colspan="2"> 
+                                                                                <div class="compliance-graph">
+                                                                                    <div class="row">
+                                                                                        <div class="col-7">
+                                                                                            <div class="png-comp">
+                                                                                                <!-- <img src="../../../assets/images/png-comp.png" alt=""> -->
+                                                                                                <round-progress
+                                                                                                [current]="current"
+                                                                                                [max]="max"
+                                                                                                [color]="'#065ba4'"
+                                                                                                [background]="'#eaeaea'"
+                                                                                                [radius]="125"
+                                                                                                [stroke]="18"
+                                                                                                [semicircle]="true"
+                                                                                                [rounded]="true"
+                                                                                                [clockwise]="true"
+                                                                                                [responsive]="true"
+                                                                                            
+                                                                                            />
+
+                                                                                            <div class="compliance-details">
+                                                                                                    <span>141%</span>
+                                                                                                    <h2>Compliance</h2>
+                                                                                                </div>
+                                                                                        
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-5">
+                                                                                            <div class="pro-rata">
+                                                                                                <span>Pro-rata Target</span>
+                                                                                                <p>32</p>
+                                                                                                <span class="mtarget">Monthly Target</span>
+                                                                                                <p>40</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th class="compliance-data-bg">FTD SMP Compliance</th>
+                                                                            <td class="compliance-data-bg">07</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>MTD SMP Compliance</th>
+                                                                            <td>247</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th class="compliance-data-bg">Compliant</th>
+                                                                            <td class="compliance-data-bg">100Y</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Box Four -->
+                                                        <div class="col-xxl-4 col-lg-4 col-md-6">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="2" class="head-icon-text">
+                                                                                <img src="../../../assets/images/icons/organisation.png"
+                                                                                alt=""> Meeting with Branch Head
+                                                                                <!-- tooltip -->
+                                                                                <button type="button" class="tooltip-btn table-tooltip progress-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="This space is for definition text">
+                                                                                    <img src="../../../assets/images/icons/tooltip.svg" alt="">
+                                                                                </button>
+                                                                                <!-- tooltip -->  
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th colspan="2"> 
+                                                                                <div class="compliance-graph">
+                                                                                    <div class="row">
+                                                                                        <div class="col-7">
+                                                                                            <div class="png-comp">
+                                                                                                <round-progress
+                                                                                                    [current]="current"
+                                                                                                    [max]="max"
+                                                                                                    [color]="'#065ba4'"
+                                                                                                    [background]="'#eaeaea'"
+                                                                                                    [radius]="125"
+                                                                                                    [stroke]="18"
+                                                                                                    [semicircle]="true"
+                                                                                                    [rounded]="true"
+                                                                                                    [clockwise]="true"
+                                                                                                    [responsive]="true"
+                                                                                                
+                                                                                                />
+
+                                                                                                <div class="compliance-details">
+                                                                                                    <span>138%</span>
+                                                                                                    <h2>Compliance</h2>
+                                                                                            </div>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-5">
+                                                                                            <div class="pro-rata">
+                                                                                                <span>Pro-rata Target</span>
+                                                                                                <p>16</p>
+                                                                                                <span class="mtarget">Monthly Target</span>
+                                                                                                <p>20</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th class="compliance-data-bg">FTD SMP Compliance</th>
+                                                                            <td class="compliance-data-bg">07</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>MTD SMP Compliance</th>
+                                                                            <td>247</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th class="compliance-data-bg">Compliant</th>
+                                                                            <td class="compliance-data-bg">100Y</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>    
+
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <!-- Team -->
+                                    <div class="tab-pane fade" id="pills-team" role="tabpanel" aria-labelledby="pills-team-tab">
+                                        <div class="col-lg-12">
+
+                                             <!-- Slect Month and Year -->
+                                            <div class="col-lg-12 button-flex-wrp">
+                                                <div class="monthly-select smp-report-dw">
+                                                    <div class="custom-select">
+                                                        <button class="select-button" (click)="toggleDropdown(6)"
+                                                            [ngClass]="{'arrow-up': toggles[6].state}"
+                                                            aria-labelledby="select button"
+                                                            aria-haspopup="listbox" aria-expanded="false"
+                                                            aria-controls="select-dropdown">
+                                                            <span>Month:</span>
+                                                            <span class="selected-value">Select</span>
+                                                            <span class="dropdown-arrow"></span>
+                                                        </button>
+                                                        <ul class="select-dropdown" *ngIf="toggles[6].state===true">
+                                                            <li>
+                                                                <input type="radio" id="January" name="" />
+                                                                <label for="January">January</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="February" name="" />
+                                                                <label for="February">February</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="March" name="" />
+                                                                <label for="March">March</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="April" name="" />
+                                                                <label for="April">April</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="May" name="" />
+                                                                <label for="May">May</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="June" name="" />
+                                                                <label for="June">June</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="July" name="" />
+                                                                <label for="July">July</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="August" name="" />
+                                                                <label for="August">August</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="September" name="" />
+                                                                <label for="September">September</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="October" name="" />
+                                                                <label for="October">October</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="November" name="" />
+                                                                <label for="November">November</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="December" name="" />
+                                                                <label for="December">December</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="monthly-select smp-report-dw">
+                                                    <div class="custom-select">
+                                                        <button class="select-button" (click)="toggleDropdown(7)"
+                                                            [ngClass]="{'arrow-up': toggles[7].state}"
+                                                            aria-labelledby="select button"
+                                                            aria-haspopup="listbox" aria-expanded="false"
+                                                            aria-controls="select-dropdown">
+                                                            <span>Year:</span>
+                                                            <span class="selected-value">Select</span>
+                                                            <span class="dropdown-arrow"></span>
+                                                        </button>
+                                                        <ul class="select-dropdown" *ngIf="toggles[7].state===true">
+                                                            <li>
+                                                                <input type="radio" id="2024" name="" />
+                                                                <label for="2024">2024</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="2023" name="" />
+                                                                <label for="2023">2023</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="2022" name="" />
+                                                                <label for="2022">2022</label>
+                                                            </li>
+                                                            <li>
+                                                                <input type="radio" id="2021" name="" />
+                                                                <label for="2021">2021</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="monthly-select year-select-too month-right-side">
+                                                    <div class="custom-select">
+                                                        <button class="select-button" (click)="toggleDropdown(8)"
+                                                            [ngClass]="{'arrow-up': toggles[8].state}"
+                                                            aria-labelledby="select button"
+                                                            aria-haspopup="listbox" aria-expanded="false"
+                                                            aria-controls="select-dropdown">
+                                                            <span><img src="../../../assets/images/icons/downlode-ic.png" alt=""></span>
+                                                            <span class="selected-value">Download</span>
+                                                            <span class="dropdown-arrow"></span>
+                                                        </button>
+                                                        <ul class="select-dropdown" *ngIf="toggles[8].state===true">
+                                                            <li>
+                                                                <label for="2024">Consolidate Data</label>
+                                                            </li>
+                                                            <li>
+                                                                <label for="2023">DSR/SMP Activity Data</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="wpc-info-number"><p><img src="../../../assets/images/icons/wpc-Info.svg" alt=""> <strong>2 team members</strong> are not complaint on SMP</p></div>
+                                            </div>
+                                            
+                                            <!-- search filter -->
+                                            <div class="policy-filter-top new-search-filter">
+                                                <h2>Team Members</h2>
+                                                <div class="f-policies">
+                                                    <div class="searc-box-left">
+                                                        <span class="search-icon"></span>
+                                                        <input type="text"
+                                                            placeholder="Search for policies or anything">
+                                                    </div>
+                                                    <div class="filter-policies">
+                                                        <button (click)="togglesSearchFilter(0)" [ngClass]="{'arrow-up': togglesSearch[0].state}"><img
+                                                            src="../../../assets/images/icons/filter.png" alt=""
+                                                            class="filter-icon"> Filters
+                                                            <img src="../../../assets/images/dropdown-arrow.svg"
+                                                                alt="" class="icon-drop">
+                                                        </button>
+                                                        <div class="filter-box" *ngIf="togglesSearch[0].state === true">
+
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="flexRadioDefault" id="flexRadioDefault1"
+                                                                    checked>
+                                                                <label class="form-check-label"
+                                                                    for="flexRadioDefault1">
+                                                                    Active
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="flexRadioDefault" id="flexRadioDefault2">
+                                                                <label class="form-check-label"
+                                                                    for="flexRadioDefault2">
+                                                                    Inactive
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="flexRadioDefault" id="flexRadioDefault3">
+                                                                <label class="form-check-label"
+                                                                    for="flexRadioDefault3">
+                                                                    ACT
+                                                                </label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- new-table -->
+                                            <div class="table-p2">
+                                                <div class="table-responsive data-table-show-hide">
+                                                    <table class="table  align-middle">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="table-tr-one">Name</th>
+                                                                <th scope="col">Self SMP Compliant</th>
+                                                                <th scope="col">Self SMP BDA</th>
+                                                                <th scope="col">Team SMP Compliant</th>
+                                                                <th scope="col">Team SMP BDA</th>
+                                                                <th scope="col">MTD Achievement%</th>
+                                                                <th scope="col">YTD Achievement%</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr [ngClass]="{'bg-color-show': togglestable[0].state}">
+                                                            <th class="table-th-one">
+                                                                <div class="get-user-under-details" (click)="togglesTable(0)" [ngClass]="{'show-under-user': togglestable[0].state}">+</div>
+                                                                <div class="main-user-under"> 
+                                                                    <span class="user-name" [routerLink]="['/smp-user-information']">Mrs. Saroj Kumar Tripathi</span>
+                                                                    <span class="tooltiptext">Click to view more</span>
+                                                                    <div class="am-number">AM-255620 <span class="active">Active</span></div>
+                                                                </div>
+                                                            </th>
+                                                            <td>100Y</td>
+                                                            <td>5000</td>
+                                                            <td>60Y</td>
+                                                            <td>34500</td>
+                                                            <td>78%</td>
+                                                            <td>78%</td>
+                                                        </tr>
+                                                        <tr *ngIf="togglestable[0].state === true" class="bg-light-show-table">
+                                                            <th class="table-th-one">
+                                                                <!-- if you want user row add plus div here -->
+                                                                <div class="main-user-under no-under-user"> 
+                                                                    <span class="user-name">Mr. Vedant Show</span>
+                                                                    <div class="am-number">AM-255620 <span class="active">Active</span></div>
+                                                                </div>
+                                                            </th>
+                                                            <td>100Y</td>
+                                                            <td>5000</td>
+                                                            <td>60Y</td>
+                                                            <td>34500</td>
+                                                            <td>78%</td>
+                                                            <td>78%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="table-th-one">
+                                                                <div class="get-user-under-details">+</div>
+                                                                <div class="main-user-under"> 
+                                                                    <span class="user-name">Mr. Sahajanand Mishra</span>
+                                                                    <div class="am-number">AM-255620 <span class="inactive">Inactive</span></div>
+                                                                </div>
+                                                            </th>
+                                                            <td>100Y</td>
+                                                            <td>5000</td>
+                                                            <td>60Y</td>
+                                                            <td>34500</td>
+                                                            <td>78%</td>
+                                                            <td>78%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="table-th-one">
+                                                                <div class="get-user-under-details">+</div>
+                                                                <div class="main-user-under"> 
+                                                                    <span class="user-name">Mr. Sahajanand Mishra</span>
+                                                                    <div class="am-number">AM-255620 <span class="active">Active</span></div>
+                                                                </div>
+                                                            </th>
+                                                            <td>100Y</td>
+                                                            <td>5000</td>
+                                                            <td>60Y</td>
+                                                            <td>34500</td>
+                                                            <td>78%</td>
+                                                            <td>78%</td>
+                                                        </tr>
+                                                        
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>   
+                                    </div>
+
+                                    <!-- Comparison -->
+                                    <div class="tab-pane fade" id="pills-comparison" role="tabpanel" aria-labelledby="pills-comparison-tab">
+                                        
+                                        <div class="col-lg-12">
+
+                                            <!-- content   -->
+                                            <div class="wpc-info-number team-yellow-info ">
+                                                <p><img src="../../../assets/images/icons/wpc-Info.svg" alt=""> Comparison on business numbers of direct reportee for MTD & YTD.</p>
+                                            </div>
+    
+                                            <div class="team-heading-number">
+                                                <h3>Team Members <span>(3)</span></h3>
+                                                <div class="monthly-select year-select-too month-right-side">
+                                                    <div class="custom-select">
+                                                        <button class="select-button" (click)="toggleDropdown(7)"
+                                                            [ngClass]="{'arrow-up': toggles[7].state}"
+                                                            aria-labelledby="select button"
+                                                            aria-haspopup="listbox" aria-expanded="false"
+                                                            aria-controls="select-dropdown">
+                                                            <span><img src="../../../assets/images/icons/downlode-ic.png" alt=""></span>
+                                                            <span class="selected-value">Download</span>
+                                                            <span class="dropdown-arrow"></span>
+                                                        </button>
+                                                        <ul class="select-dropdown" *ngIf="toggles[7].state===true">
+                                                            <li>
+                                                                <label for="2024">Consolidate Data</label>
+                                                            </li>
+                                                            <li>
+                                                                <label for="2023">DSR/SMP Activity Data</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <!-- MTD DATA table -->
+                                            <h3 class="mtd-data-heading-comparision">MTD comparison</h3>
+                                            <div class="table-p2">
+                                                <div class="table-responsive data-table-show-hide">
+                                                    <table class="table table-stripeds table-hover align-middle">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="table-tr-one">Name</th>
+                                                                <th scope="col">Self SMP Compliant</th>
+                                                                <th scope="col">Self SMP BDA</th>
+                                                                <th scope="col">Team SMP Compliant</th>
+                                                                <th scope="col">Team SMP BDA</th>
+                                                                <th scope="col">MTD Achievement%</th>
+                                                                <th scope="col">YTD Achievement%</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <th class="table-th-one">
+                                                                <div class="main-user-under"> 
+                                                                    <span class="user-name">Mrs. Saroj Kumar Tripathi</span>
+                                                                    <div class="am-number">AM-255620 <span class="active">Active</span></div>
+                                                                </div>
+                                                            </th>
+                                                            <td>100Y</td>
+                                                            <td>5000</td>
+                                                            <td>60Y</td>
+                                                            <td>34500</td>
+                                                            <td>78%</td>
+                                                            <td>78%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="table-th-one">
+                                                                <div class="main-user-under "> 
+                                                                    <span class="user-name">Mr. Vedant Show</span>
+                                                                    <div class="am-number">AM-255620 <span class="inactive">Inactive</span></div>
+                                                                </div>
+                                                            </th>
+                                                            <td>100Y</td>
+                                                            <td>5000</td>
+                                                            <td>60Y</td>
+                                                            <td>34500</td>
+                                                            <td>78%</td>
+                                                            <td>78%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="table-th-one">
+                                                                <div class="main-user-under"> 
+                                                                    <span class="user-name">Mr. Vedant Show</span>
+                                                                    <div class="am-number">AM-255620 <span class="active">Active</span></div>
+                                                                </div>
+                                                            </th>
+                                                            <td>100Y</td>
+                                                            <td>5000</td>
+                                                            <td>60Y</td>
+                                                            <td>34500</td>
+                                                            <td>78%</td>
+                                                            <td>78%</td>
+                                                        </tr>
+                                                        
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+    
+                                            
+                                        </div>   
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>            
+       
+
+    </div>    
+</div>
