@@ -237,7 +237,7 @@
     }
 
     .data-chart-tabs .nav{
-        right: 41px;
+        right: -41px;
         top: -125px;
     }
 
@@ -269,5 +269,9 @@
     .month-right-side{
         /* top: -8px !important; */
         /* height: 42px; */
+    }
+
+    .header-shot .heading1 {
+        font-size: 14px;
     }
 }
