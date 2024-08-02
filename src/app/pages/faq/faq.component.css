@@ -1,0 +1,115 @@
+.header-shot{
+    margin-bottom: 15px;
+}
+
+.header-shot .heading1{
+    position: relative;
+    top: 8px;
+}
+
+.accordion{
+    margin: 25px 35px;
+    padding-bottom: 80px;
+}
+
+.accordion-item{
+    border: none;
+    border-bottom: 1px solid #001F331A;
+}
+
+.accordion-button{
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 20px 0px 15px 0px;
+    font-family: Exo;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23.92px;
+    color: #001F33;
+    text-align: left;
+}
+
+.accordion-body{
+    padding: 0px 0px 5px 0px;
+}
+
+.accordion-body p{
+    font-family: Exo;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #001f337a;
+    margin-bottom: 10px;
+}
+
+.accordion-body a{
+    color: #001f337a;
+}
+
+.accordion-body li{
+    font-family: Exo;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #001f337a;
+    margin-bottom: 10px;
+    list-style: disc;
+    margin-left: 15px;
+}
+
+.accordion-button::after{
+    background-image: url(../../../assets/images/dropdown-arrow.svg);
+}
+
+.searc-box-left{
+    width: 100%;
+    margin: 40px 35px 0px 35px;
+}
+
+
+@media screen and (max-width: 1440px) {
+
+    .accordion{
+        margin: 20px 20px;
+    }
+
+    .searc-box-left{
+        margin: 40px 20px 0px 20px
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .profile-inner-details span {
+        font-size: 12px;
+        margin-left: 25px;
+    }
+
+    .header-shot .heading1{
+        top: 12px;
+    }
+
+    .white-main-content{
+        margin-top: 92px;
+    }
+
+    .accordion{
+        margin: 10px 0px;
+    }
+
+    .accordion-button{
+        font-size: 16px;
+    }
+
+    .accordion-body p{
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .searc-box-left{
+        margin: 10px 0px 0px 0px
+    }
+
+}

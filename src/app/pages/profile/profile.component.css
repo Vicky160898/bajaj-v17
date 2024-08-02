@@ -1,0 +1,29 @@
+.header-shot{
+    margin-bottom: 15px;
+}
+
+.header-shot .heading1{
+    position: relative;
+    top: 8px;
+}
+
+@media screen and (max-width: 1440px) {
+
+   
+}
+
+@media screen and (max-width: 992px) {
+    .profile-inner-details span {
+        font-size: 12px;
+        margin-left: 25px;
+    }
+
+    .header-shot .heading1{
+        top: 12px;
+    }
+
+    .white-main-content{
+        margin-top: 92px;
+    }
+
+}
